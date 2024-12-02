@@ -1,0 +1,59 @@
+---
+title: Input
+description: Displays a form input field or a component that looks like an input field.
+component: true
+---
+
+<ComponentPreview
+  name="input-default"
+  className="[&_input]:max-w-xs"
+  description="A form input component."
+/>
+
+## Installation
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="input" title="components/ui/input.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+## Usage
+
+```tsx
+import { Input } from "@/components/ui/input"
+```
+
+```tsx
+<Input />
+```
+
+## Examples
+
+### Variants
+
+Use the `variant` prop to change the visual style of the input.
+
+<ComponentPreview name="input-variants" className="[&_input]:max-w-xs" />
+
+### Sizes
+
+Use the `size` prop to change the size of the input.
+
+<ComponentPreview name="input-sizes" className="[&_input]:max-w-xs" />
+
+### Disabled
+
+Use the `disabled` prop to disable the input.
+
+<ComponentPreview name="input-disabled" className="[&_input]:max-w-xs" />
+
+### Error
+
+Use the `data-invalid` prop to change the input to an error state.
+
+<ComponentPreview name="input-error" className="[&_input]:max-w-xs" />
