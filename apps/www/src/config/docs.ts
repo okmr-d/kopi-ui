@@ -39,6 +39,11 @@ export const docsConfig: DocsConfig = {
           href: "/docs/components/input",
           items: [],
         },
+        {
+          title: "File input",
+          href: "/docs/components/file-input",
+          items: [],
+        },
       ],
     },
   ],

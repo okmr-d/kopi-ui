@@ -1,5 +1,5 @@
-import { Input } from "@/components/registry/ui/input"
+import { Input } from "@/components/ui/input"
 
 export default function InputDemo() {
-  return <Input type="search" placeholder="Email" />
+  return <Input type="email" placeholder="Email" />
 }

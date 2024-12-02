@@ -16,10 +16,10 @@ const inputVariants = cva(
         filled: "border-transparent bg-accent",
       },
       size: {
-        xs: "h-7 px-2 py-0.5 text-xs rounded-md",
-        sm: "h-8 px-2.5 py-1 text-xs rounded-md",
-        md: "h-9 px-3 py-2 text-sm rounded-md",
-        lg: "h-10 px-3.5 py-2 text-base rounded-md",
+        xs: "h-7 px-2 py-0.5 text-xs rounded-[6px]",
+        sm: "h-8 px-2.5 py-1 text-xs rounded-[7px]",
+        md: "h-9 px-3 py-2 text-sm rounded-[8px]",
+        lg: "h-10 px-3.5 py-2 text-base rounded-[9px]",
       },
     },
     defaultVariants: {

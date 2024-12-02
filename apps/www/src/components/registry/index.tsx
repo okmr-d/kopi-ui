@@ -9,10 +9,10 @@ export const Index: Record<string, any> = {
     files: [
       {
         fileName: "input",
-        path: "src/components/registry/ui/input.tsx",
+        path: "src/components/ui/input.tsx",
       },
     ],
-    component: React.lazy(() => import("@/components/registry/ui/input")),
+    component: React.lazy(() => import("@/components/ui/input")),
   },
   "input-default": {
     name: "input-default",
@@ -67,6 +67,76 @@ export const Index: Record<string, any> = {
     ],
     component: React.lazy(
       () => import("@/components/registry/examples/input/input-sizes"),
+    ),
+  },
+  "file-input": {
+    name: "file-input",
+    files: [
+      {
+        fileName: "file-input",
+        path: "src/components/ui/file-input.tsx",
+      },
+    ],
+    component: React.lazy(() => import("@/components/ui/file-input")),
+  },
+  "file-input-default": {
+    name: "file-input-default",
+    files: [
+      {
+        path: "src/components/registry/examples/file-input/file-input-default.tsx",
+      },
+    ],
+    component: React.lazy(
+      () =>
+        import("@/components/registry/examples/file-input/file-input-default"),
+    ),
+  },
+  "file-input-error": {
+    name: "file-input-error",
+    files: [
+      {
+        path: "src/components/registry/examples/file-input/file-input-error.tsx",
+      },
+    ],
+    component: React.lazy(
+      () =>
+        import("@/components/registry/examples/file-input/file-input-error"),
+    ),
+  },
+  "file-input-disabled": {
+    name: "file-input-disabled",
+    files: [
+      {
+        path: "src/components/registry/examples/file-input/file-input-disabled.tsx",
+      },
+    ],
+    component: React.lazy(
+      () =>
+        import("@/components/registry/examples/file-input/file-input-disabled"),
+    ),
+  },
+  "file-input-variants": {
+    name: "file-input-variants",
+    files: [
+      {
+        path: "src/components/registry/examples/file-input/file-input-variants.tsx",
+      },
+    ],
+    component: React.lazy(
+      () =>
+        import("@/components/registry/examples/file-input/file-input-variants"),
+    ),
+  },
+  "file-input-sizes": {
+    name: "file-input-sizes",
+    files: [
+      {
+        path: "src/components/registry/examples/file-input/file-input-sizes.tsx",
+      },
+    ],
+    component: React.lazy(
+      () =>
+        import("@/components/registry/examples/file-input/file-input-sizes"),
     ),
   },
 }
