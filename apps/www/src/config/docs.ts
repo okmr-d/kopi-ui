@@ -40,7 +40,7 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
-          title: "File input",
+          title: "File Input",
           href: "/docs/components/file-input",
           items: [],
         },

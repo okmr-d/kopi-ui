@@ -16,7 +16,12 @@ export function SiteHeader() {
         <MobileNav />
         <div className="flex flex-1 items-center gap-2 justify-end">
           <nav className="flex items-center gap-0.5">
-            <Button variant="ghost" size="icon" className="h-8 w-8 px-0">
+            <Button
+              asChild
+              variant="ghost"
+              size="icon"
+              className="h-8 w-8 px-0"
+            >
               <Link
                 href={siteConfig.links.github}
                 target="_blank"
