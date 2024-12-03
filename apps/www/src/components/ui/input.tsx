@@ -4,7 +4,7 @@ import * as React from "react"
 
 export const inputVariants = cva(
   [
-    "flex w-full border text-foreground placeholder:text-muted-foreground",
+    "inline-flex w-full border text-foreground placeholder:text-muted-foreground",
     "focus-visible:border-ring focus-visible:outline-none focus-visible:ring-[1px] focus-visible:ring-ring",
     "disabled:cursor-not-allowed disabled:opacity-50",
     "data-[invalid]:border-destructive data-[invalid]:focus-visible:border-destructive data-[invalid]:focus-visible:ring-destructive",

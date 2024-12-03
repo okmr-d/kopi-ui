@@ -3,7 +3,7 @@ import { UserIcon } from "lucide-react"
 
 export default function NativeSelectDemo() {
   return (
-    <div className="grid w-full max-w-xs items-center gap-4">
+    <div className="grid w-full max-w-xs gap-4">
       <div className="group relative">
         <NativeSelect size="xs" className="ps-7">
           <option value="1">Option 1</option>

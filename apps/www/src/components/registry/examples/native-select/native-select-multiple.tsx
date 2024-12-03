@@ -2,8 +2,8 @@ import { NativeSelect } from "@/components/ui/native-select"
 
 export default function NativeSelectDemo() {
   return (
-    <div className="grid w-full max-w-xs items-center gap-4">
-      <NativeSelect multiple className="h-40 ps-0 pe-0 py-2">
+    <div className="w-full max-w-xs">
+      <NativeSelect multiple>
         <option value="1" className="px-3 py-2">
           Option 1
         </option>

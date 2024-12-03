@@ -5,7 +5,7 @@ import * as React from "react"
 
 export const nativeSelectVariants = cva(
   [
-    "peer flex w-full cursor-pointer appearance-none border text-foreground placeholder:text-muted-foreground",
+    "peer inline-flex w-full cursor-pointer appearance-none border text-foreground placeholder:text-muted-foreground",
     "focus-visible:border-ring focus-visible:outline-none focus-visible:ring-[1px] focus-visible:ring-ring",
     "disabled:cursor-not-allowed disabled:opacity-50",
     "data-[invalid]:border-destructive data-[invalid]:focus-visible:border-destructive data-[invalid]:focus-visible:ring-destructive",
@@ -23,10 +23,14 @@ export const nativeSelectVariants = cva(
         md: "h-9 pe-8 ps-3 text-sm rounded-[8px]",
         lg: "h-10 pe-9 ps-3.5 text-base rounded-[9px]",
       },
+      isMultiple: {
+        true: "h-auto ps-0 pe-0",
+      },
     },
     defaultVariants: {
       variant: "outline",
       size: "md",
+      isMultiple: false,
     },
   },
 )
@@ -60,6 +64,7 @@ const NativeSelect = React.forwardRef<HTMLSelectElement, NativeSelectProps>(
             nativeSelectVariants({
               variant,
               size,
+              isMultiple: props.multiple,
             }),
             className,
           )}

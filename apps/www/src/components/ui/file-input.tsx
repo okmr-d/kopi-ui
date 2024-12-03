@@ -4,7 +4,7 @@ import * as React from "react"
 
 export const fileInputVariants = cva(
   [
-    "flex w-full border italic text-muted-foreground file:h-full file:border-0 file:border-r file:border-solid file:border-input file:bg-transparent file:font-medium file:not-italic file:text-foreground",
+    "inline-flex w-full border italic text-muted-foreground file:h-full file:border-0 file:border-r file:border-solid file:border-input file:bg-transparent file:font-medium file:not-italic file:text-foreground",
     "focus-visible:border-ring focus-visible:outline-none focus-visible:ring-[1px] focus-visible:ring-ring",
     "disabled:cursor-not-allowed disabled:opacity-50",
     "data-[invalid]:border-destructive data-[invalid]:focus-visible:border-destructive data-[invalid]:focus-visible:ring-destructive",

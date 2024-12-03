@@ -2,7 +2,7 @@ import { NativeSelect } from "@/components/ui/native-select"
 
 export default function NativeSelectDemo() {
   return (
-    <div className="grid w-full max-w-xs items-center gap-4">
+    <div className="w-full max-w-xs">
       <NativeSelect defaultValue="">
         <option value="" disabled>
           Select an option
