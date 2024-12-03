@@ -2,7 +2,7 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 import * as React from "react"
 
-const fileInputVariants = cva(
+export const fileInputVariants = cva(
   [
     "flex w-full border italic text-muted-foreground file:h-full file:border-0 file:border-r file:border-solid file:border-input file:bg-transparent file:font-medium file:not-italic file:text-foreground",
     "focus-visible:border-ring focus-visible:outline-none focus-visible:ring-[1px] focus-visible:ring-ring",
@@ -29,7 +29,7 @@ const fileInputVariants = cva(
   },
 )
 
-interface FileInputProps
+export interface FileInputProps
   extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "size" | "type">,
     VariantProps<typeof fileInputVariants> {}
 
@@ -53,4 +53,4 @@ const FileInput = React.forwardRef<HTMLInputElement, FileInputProps>(
 )
 FileInput.displayName = "FileInput"
 
-export { fileInputVariants, type FileInputProps, FileInput }
+export { FileInput }

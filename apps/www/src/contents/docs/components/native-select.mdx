@@ -1,0 +1,76 @@
+---
+title: Select (Native)
+description: Displays a form select field or a component that looks like a select field.
+component: true
+---
+
+<ComponentPreview
+  name="native-select-default"
+  description="A form select component."
+/>
+
+## Installation
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="native-select" title="components/ui/native-select.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+## Usage
+
+```tsx
+import { NativeSelect } from "@/components/ui/native-select"
+```
+
+```tsx
+<NativeSelect>
+  <option value="1">Option 1</option>
+  <option value="2">Option 2</option>
+  <option value="3">Option 3</option>
+</NativeSelect>
+```
+
+## Examples
+
+### Variants
+
+Use the `variant` prop to change the visual style of the select field.
+
+<ComponentPreview name="native-select-variants" />
+
+### Placeholder
+
+<ComponentPreview name="native-select-placeholder" />
+
+### Auto Width
+
+Wrap the `NativeSelect` in a container with `width: fit-content` style to make the select field auto width.
+
+<ComponentPreview name="native-select-auto-width" />
+
+### Sizes
+
+Use the `size` prop to change the size of the select field.
+
+<ComponentPreview name="native-select-sizes" />
+
+### Disabled
+
+Use the `disabled` prop to disable the select field.
+
+<ComponentPreview name="native-select-disabled" />
+
+### Error
+
+Use the `data-invalid` prop to change the select field to an error state.
+
+<ComponentPreview name="native-select-error" />
+
+### With Icon
+
+<ComponentPreview name="native-select-with-icon" />

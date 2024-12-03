@@ -44,6 +44,11 @@ export const docsConfig: DocsConfig = {
           href: "/docs/components/file-input",
           items: [],
         },
+        {
+          title: "Select (Native)",
+          href: "/docs/components/native-select",
+          items: [],
+        },
       ],
     },
   ],

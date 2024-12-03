@@ -139,4 +139,126 @@ export const Index: Record<string, any> = {
         import("@/components/registry/examples/file-input/file-input-sizes"),
     ),
   },
+  "native-select": {
+    name: "native-select",
+    files: [
+      {
+        fileName: "native-select",
+        path: "src/components/ui/native-select.tsx",
+      },
+    ],
+    component: React.lazy(() => import("@/components/ui/native-select")),
+  },
+  "native-select-default": {
+    name: "native-select-default",
+    files: [
+      {
+        path: "src/components/registry/examples/native-select/native-select-default.tsx",
+      },
+    ],
+    component: React.lazy(
+      () =>
+        import(
+          "@/components/registry/examples/native-select/native-select-default"
+        ),
+    ),
+  },
+  "native-select-placeholder": {
+    name: "native-select-placeholder",
+    files: [
+      {
+        path: "src/components/registry/examples/native-select/native-select-placeholder.tsx",
+      },
+    ],
+    component: React.lazy(
+      () =>
+        import(
+          "@/components/registry/examples/native-select/native-select-placeholder"
+        ),
+    ),
+  },
+  "native-select-auto-width": {
+    name: "native-select-auto-width",
+    files: [
+      {
+        path: "src/components/registry/examples/native-select/native-select-auto-width.tsx",
+      },
+    ],
+    component: React.lazy(
+      () =>
+        import(
+          "@/components/registry/examples/native-select/native-select-auto-width"
+        ),
+    ),
+  },
+  "native-select-error": {
+    name: "native-select-error",
+    files: [
+      {
+        path: "src/components/registry/examples/native-select/native-select-error.tsx",
+      },
+    ],
+    component: React.lazy(
+      () =>
+        import(
+          "@/components/registry/examples/native-select/native-select-error"
+        ),
+    ),
+  },
+  "native-select-disabled": {
+    name: "native-select-disabled",
+    files: [
+      {
+        path: "src/components/registry/examples/native-select/native-select-disabled.tsx",
+      },
+    ],
+    component: React.lazy(
+      () =>
+        import(
+          "@/components/registry/examples/native-select/native-select-disabled"
+        ),
+    ),
+  },
+  "native-select-variants": {
+    name: "native-select-variants",
+    files: [
+      {
+        path: "src/components/registry/examples/native-select/native-select-variants.tsx",
+      },
+    ],
+    component: React.lazy(
+      () =>
+        import(
+          "@/components/registry/examples/native-select/native-select-variants"
+        ),
+    ),
+  },
+  "native-select-sizes": {
+    name: "native-select-sizes",
+    files: [
+      {
+        path: "src/components/registry/examples/native-select/native-select-sizes.tsx",
+      },
+    ],
+    component: React.lazy(
+      () =>
+        import(
+          "@/components/registry/examples/native-select/native-select-sizes"
+        ),
+    ),
+  },
+  "native-select-with-icon": {
+    name: "native-select-with-icon",
+    files: [
+      {
+        path: "src/components/registry/examples/native-select/native-select-with-icon.tsx",
+      },
+    ],
+    component: React.lazy(
+      () =>
+        import(
+          "@/components/registry/examples/native-select/native-select-with-icon"
+        ),
+    ),
+  },
 }

@@ -2,7 +2,7 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 import * as React from "react"
 
-const inputVariants = cva(
+export const inputVariants = cva(
   [
     "flex w-full border text-foreground placeholder:text-muted-foreground",
     "focus-visible:border-ring focus-visible:outline-none focus-visible:ring-[1px] focus-visible:ring-ring",
@@ -29,7 +29,7 @@ const inputVariants = cva(
   },
 )
 
-interface InputProps
+export interface InputProps
   extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "size" | "type">,
     VariantProps<typeof inputVariants> {
   type?:
@@ -62,4 +62,4 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
 )
 Input.displayName = "Input"
 
-export { inputVariants, type InputProps, Input }
+export { Input }
