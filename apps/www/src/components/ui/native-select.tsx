@@ -49,13 +49,12 @@ export interface NativeSelectProps
   extends Omit<React.SelectHTMLAttributes<HTMLSelectElement>, "size">,
     VariantProps<typeof nativeSelectVariants> {
   children: React.ReactNode
-  wrapperClassName?: string
 }
 
 const NativeSelect = React.forwardRef<HTMLSelectElement, NativeSelectProps>(
-  ({ className, variant, size, wrapperClassName, children, ...props }, ref) => {
+  ({ className, variant, size, children, ...props }, ref) => {
     return (
-      <div className={cn("relative", wrapperClassName)}>
+      <div className="relative">
         <select
           className={cn(
             nativeSelectVariants({
