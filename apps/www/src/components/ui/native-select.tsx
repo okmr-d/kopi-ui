@@ -69,12 +69,14 @@ const NativeSelect = React.forwardRef<HTMLSelectElement, NativeSelectProps>(
         >
           {children}
         </select>
-        <span className="pointer-events-none absolute inset-y-0 end-0 flex aspect-square items-center justify-center text-muted-foreground peer-disabled:opacity-50">
-          <ChevronDown
-            className={nativeSelectIconVariants({ size })}
-            aria-hidden="true"
-          />
-        </span>
+        {!props.multiple && (
+          <span className="pointer-events-none absolute inset-y-0 end-0 flex aspect-square items-center justify-center text-muted-foreground peer-disabled:opacity-50">
+            <ChevronDown
+              className={nativeSelectIconVariants({ size })}
+              aria-hidden="true"
+            />
+          </span>
+        )}
       </div>
     )
   },

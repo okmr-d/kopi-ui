@@ -261,4 +261,18 @@ export const Index: Record<string, any> = {
         ),
     ),
   },
+  "native-select-multiple": {
+    name: "native-select-multiple",
+    files: [
+      {
+        path: "src/components/registry/examples/native-select/native-select-multiple.tsx",
+      },
+    ],
+    component: React.lazy(
+      () =>
+        import(
+          "@/components/registry/examples/native-select/native-select-multiple"
+        ),
+    ),
+  },
 }
