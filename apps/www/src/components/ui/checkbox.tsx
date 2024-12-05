@@ -22,8 +22,9 @@ export const checkboxVariants = cva(
           "border-transparent bg-accent data-[state=checked]:text-accent-foreground data-[state=indeterminate]:text-accent-foreground",
       },
       size: {
-        md: "size-4 rounded-sm",
-        lg: "size-5 rounded-sm",
+        sm: "size-4 rounded-sm",
+        md: "size-5 rounded-sm",
+        lg: "size-6 rounded-sm",
       },
     },
     defaultVariants: {
@@ -32,6 +33,19 @@ export const checkboxVariants = cva(
     },
   },
 )
+
+export const checkboxIconVariants = cva("stroke-[3px]", {
+  variants: {
+    size: {
+      sm: "size-3",
+      md: "size-4",
+      lg: "size-5",
+    },
+  },
+  defaultVariants: {
+    size: "md",
+  },
+})
 
 export interface NativeSelectProps
   extends React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>,
@@ -58,15 +72,9 @@ const Checkbox = React.forwardRef<
   >
     <CheckboxPrimitive.Indicator className="absolute inset-0 flex items-center justify-center">
       {props.checked === "indeterminate" ? (
-        <MinusIcon
-          strokeWidth={3}
-          className={size === "lg" ? "size-4" : "size-3"}
-        />
+        <MinusIcon className={checkboxIconVariants({ size })} />
       ) : (
-        <CheckIcon
-          strokeWidth={3}
-          className={size === "lg" ? "size-4" : "size-3"}
-        />
+        <CheckIcon className={checkboxIconVariants({ size })} />
       )}
     </CheckboxPrimitive.Indicator>
   </CheckboxPrimitive.Root>

@@ -10,7 +10,7 @@ export default function CheckboxDemo() {
   )
 
   return (
-    <div className="flex items-center space-x-2">
+    <div className="flex items-center space-x-2.5">
       <Checkbox
         id="indeterminate-1"
         checked={checked}
