@@ -6,13 +6,11 @@ export default function CheckboxDemo() {
     <div className="grid gap-4">
       <div className="flex items-center space-x-2">
         <Checkbox id="sizes-md" size="md" />
-        <Label htmlFor="sizes-md" size="md">
-          Medium (Default)
-        </Label>
+        <Label htmlFor="sizes-md">Medium (Default)</Label>
       </div>
       <div className="flex items-center space-x-2">
         <Checkbox id="sizes-lg" size="lg" />
-        <Label htmlFor="sizes-lg" size="lg">
+        <Label htmlFor="sizes-lg" className="text-base">
           Large
         </Label>
       </div>

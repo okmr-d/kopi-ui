@@ -35,8 +35,8 @@ export const docsConfig: DocsConfig = {
       title: "Components",
       items: [
         {
-          title: "Input",
-          href: "/docs/components/input",
+          title: "Checkbox",
+          href: "/docs/components/checkbox",
           items: [],
         },
         {
@@ -45,13 +45,18 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
-          title: "Select (Native)",
-          href: "/docs/components/native-select",
+          title: "Input",
+          href: "/docs/components/input",
           items: [],
         },
         {
-          title: "Checkbox",
-          href: "/docs/components/checkbox",
+          title: "Label",
+          href: "/docs/components/label",
+          items: [],
+        },
+        {
+          title: "Select (Native)",
+          href: "/docs/components/native-select",
           items: [],
         },
       ],

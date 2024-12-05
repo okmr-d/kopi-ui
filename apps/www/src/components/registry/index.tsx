@@ -354,4 +354,25 @@ export const Index: Record<string, any> = {
         ),
     ),
   },
+  label: {
+    name: "label",
+    files: [
+      {
+        fileName: "label",
+        path: "src/components/ui/label.tsx",
+      },
+    ],
+    component: React.lazy(() => import("@/components/ui/label")),
+  },
+  "label-default": {
+    name: "label-default",
+    files: [
+      {
+        path: "src/components/registry/examples/label/label-default.tsx",
+      },
+    ],
+    component: React.lazy(
+      () => import("@/components/registry/examples/label/label-default"),
+    ),
+  },
 }

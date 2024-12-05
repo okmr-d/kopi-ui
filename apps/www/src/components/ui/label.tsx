@@ -3,19 +3,7 @@ import { cva, VariantProps } from "class-variance-authority"
 import * as React from "react"
 
 const labelVariants = cva(
-  "select-none font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-50",
-  {
-    variants: {
-      size: {
-        sm: "text-xs",
-        md: "text-sm",
-        lg: "text-base",
-      },
-    },
-    defaultVariants: {
-      size: "md",
-    },
-  },
+  "select-none text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-50",
 )
 
 export interface LabelProps
@@ -23,18 +11,9 @@ export interface LabelProps
     VariantProps<typeof labelVariants> {}
 
 const Label = React.forwardRef<HTMLLabelElement, LabelProps>(
-  ({ className, size, ...props }, ref) => {
+  ({ className, ...props }, ref) => {
     return (
-      <label
-        className={cn(
-          labelVariants({
-            size,
-          }),
-          className,
-        )}
-        ref={ref}
-        {...props}
-      />
+      <label className={cn(labelVariants(), className)} ref={ref} {...props} />
     )
   },
 )
