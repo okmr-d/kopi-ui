@@ -24,7 +24,7 @@ export const nativeSelectVariants = cva(
         lg: "h-10 pe-9 ps-3.5 text-base rounded-[9px]",
       },
       isMultiple: {
-        true: "h-auto ps-0 pe-0",
+        true: "h-auto ps-0 pe-0 [&>*]:px-3 [&>*]:py-2",
       },
     },
     defaultVariants: {

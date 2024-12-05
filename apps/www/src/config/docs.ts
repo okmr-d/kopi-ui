@@ -49,6 +49,11 @@ export const docsConfig: DocsConfig = {
           href: "/docs/components/native-select",
           items: [],
         },
+        {
+          title: "Checkbox",
+          href: "/docs/components/checkbox",
+          items: [],
+        },
       ],
     },
   ],

@@ -275,4 +275,83 @@ export const Index: Record<string, any> = {
         ),
     ),
   },
+  checkbox: {
+    name: "checkbox",
+    files: [
+      {
+        fileName: "checkbox",
+        path: "src/components/ui/checkbox.tsx",
+      },
+    ],
+    component: React.lazy(() => import("@/components/ui/checkbox")),
+  },
+  "checkbox-default": {
+    name: "checkbox-default",
+    files: [
+      {
+        path: "src/components/registry/examples/checkbox/checkbox-default.tsx",
+      },
+    ],
+    component: React.lazy(
+      () => import("@/components/registry/examples/checkbox/checkbox-default"),
+    ),
+  },
+  "checkbox-error": {
+    name: "checkbox-error",
+    files: [
+      {
+        path: "src/components/registry/examples/checkbox/checkbox-error.tsx",
+      },
+    ],
+    component: React.lazy(
+      () => import("@/components/registry/examples/checkbox/checkbox-error"),
+    ),
+  },
+  "checkbox-disabled": {
+    name: "checkbox-disabled",
+    files: [
+      {
+        path: "src/components/registry/examples/checkbox/checkbox-disabled.tsx",
+      },
+    ],
+    component: React.lazy(
+      () => import("@/components/registry/examples/checkbox/checkbox-disabled"),
+    ),
+  },
+  "checkbox-variants": {
+    name: "checkbox-variants",
+    files: [
+      {
+        path: "src/components/registry/examples/checkbox/checkbox-variants.tsx",
+      },
+    ],
+    component: React.lazy(
+      () => import("@/components/registry/examples/checkbox/checkbox-variants"),
+    ),
+  },
+  "checkbox-sizes": {
+    name: "checkbox-sizes",
+    files: [
+      {
+        path: "src/components/registry/examples/checkbox/checkbox-sizes.tsx",
+      },
+    ],
+    component: React.lazy(
+      () => import("@/components/registry/examples/checkbox/checkbox-sizes"),
+    ),
+  },
+  "checkbox-indeterminate": {
+    name: "checkbox-indeterminate",
+    files: [
+      {
+        path: "src/components/registry/examples/checkbox/checkbox-indeterminate.tsx",
+      },
+    ],
+    component: React.lazy(
+      () =>
+        import(
+          "@/components/registry/examples/checkbox/checkbox-indeterminate"
+        ),
+    ),
+  },
 }

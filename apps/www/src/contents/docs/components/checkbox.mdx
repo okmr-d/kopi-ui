@@ -1,0 +1,67 @@
+---
+title: Checkbox
+description: Displays a checkbox.
+component: true
+---
+
+<ComponentPreview name="checkbox-default" description="A checkbox component." />
+
+## Installation
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @radix-ui/react-checkbox
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="checkbox" title="components/ui/checkbox.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+## Usage
+
+```tsx
+import { Checkbox } from "@/components/ui/checkbox"
+```
+
+```tsx
+<Checkbox />
+```
+
+## Examples
+
+### Variants
+
+Use the `variant` prop to change the visual style of the checkbox.
+
+<ComponentPreview name="checkbox-variants" />
+
+### Sizes
+
+Use the `size` prop to change the size of the checkbox.
+
+<ComponentPreview name="checkbox-sizes" />
+
+### Disabled
+
+Use the `disabled` prop to show the checkbox in a disabled state.
+
+<ComponentPreview name="checkbox-disabled" />
+
+### Error
+
+Use the `data-disabled` prop to show the checkbox in an error state.
+
+<ComponentPreview name="checkbox-error" />
+
+### Indeterminate
+
+Set the `checked` prop to `indeterminate` to show the checkbox in an indeterminate state.
+
+<ComponentPreview name="checkbox-indeterminate" />
