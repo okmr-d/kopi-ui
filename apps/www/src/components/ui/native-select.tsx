@@ -18,7 +18,6 @@ export const nativeSelectVariants = cva(
         filled: "border-transparent bg-accent",
       },
       size: {
-        xs: "h-7 pe-6 ps-2 text-xs rounded-[6px]",
         sm: "h-8 pe-7 ps-2.5 text-xs rounded-[7px]",
         md: "h-9 pe-8 ps-3 text-sm rounded-[8px]",
         lg: "h-10 pe-9 ps-3.5 text-base rounded-[9px]",

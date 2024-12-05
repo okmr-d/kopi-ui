@@ -16,7 +16,6 @@ export const fileInputVariants = cva(
         filled: "border-transparent bg-accent",
       },
       size: {
-        xs: "h-7 pr-2 text-xs rounded-[6px] file:me-2 file:px-2 file:text-xs",
         sm: "h-8 pr-2.5 text-xs rounded-[7px] file:me-2.5 file:px-2.5 file:text-xs",
         md: "h-9 pr-3 text-sm rounded-[8px] file:me-3 file:px-3 file:text-sm",
         lg: "h-10 pr-3.5 text-base rounded-[9px] file:me-3.5 file:px-3.5 file:text-base",
