@@ -24,7 +24,7 @@ export const nativeSelectVariants = cva(
         lg: "h-10 pe-9 ps-3.5 text-base rounded-[9px]",
       },
       isMultiple: {
-        true: "h-auto ps-0 pe-0 [&>*]:px-3 [&>*]:py-2",
+        true: "h-auto py-2 ps-0 pe-0 [&>*]:px-3 [&>*]:py-2",
       },
     },
     defaultVariants: {
@@ -52,11 +52,11 @@ export const nativeSelectIconVariants = cva("", {
 export interface NativeSelectProps
   extends Omit<React.SelectHTMLAttributes<HTMLSelectElement>, "size">,
     VariantProps<typeof nativeSelectVariants> {
-  children: React.ReactNode
+  invalid?: boolean
 }
 
 const NativeSelect = React.forwardRef<HTMLSelectElement, NativeSelectProps>(
-  ({ className, variant, size, children, ...props }, ref) => {
+  ({ className, variant, size, invalid, ...props }, ref) => {
     return (
       <div className="relative">
         <select
@@ -69,10 +69,10 @@ const NativeSelect = React.forwardRef<HTMLSelectElement, NativeSelectProps>(
             className,
           )}
           ref={ref}
+          aria-invalid={invalid ?? undefined}
+          data-invalid={invalid ?? undefined}
           {...props}
-        >
-          {children}
-        </select>
+        />
         {!props.multiple && (
           <span className="pointer-events-none absolute inset-y-0 end-0 flex aspect-square items-center justify-center text-muted-foreground peer-disabled:opacity-50">
             <ChevronDown

@@ -35,12 +35,14 @@ export const checkboxVariants = cva(
 
 export interface NativeSelectProps
   extends React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>,
-    VariantProps<typeof checkboxVariants> {}
+    VariantProps<typeof checkboxVariants> {
+  invalid?: boolean
+}
 
 const Checkbox = React.forwardRef<
   React.ElementRef<typeof CheckboxPrimitive.Root>,
   NativeSelectProps
->(({ className, variant, size, ...props }, ref) => (
+>(({ className, variant, size, invalid, ...props }, ref) => (
   <CheckboxPrimitive.Root
     ref={ref}
     className={cn(
@@ -50,6 +52,8 @@ const Checkbox = React.forwardRef<
       }),
       className,
     )}
+    aria-invalid={invalid ?? undefined}
+    data-invalid={invalid ?? undefined}
     {...props}
   >
     <CheckboxPrimitive.Indicator className="absolute inset-0 flex items-center justify-center">

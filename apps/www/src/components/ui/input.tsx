@@ -41,10 +41,11 @@ export interface InputProps
     | "search"
     | "tel"
     | "url"
+  invalid?: boolean
 }
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
-  ({ className, variant, size, ...props }, ref) => {
+  ({ className, variant, size, invalid, ...props }, ref) => {
     return (
       <input
         className={cn(
@@ -55,6 +56,8 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
           className,
         )}
         ref={ref}
+        aria-invalid={invalid ?? undefined}
+        data-invalid={invalid ?? undefined}
         {...props}
       />
     )

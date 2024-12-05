@@ -31,10 +31,12 @@ export const fileInputVariants = cva(
 
 export interface FileInputProps
   extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "size" | "type">,
-    VariantProps<typeof fileInputVariants> {}
+    VariantProps<typeof fileInputVariants> {
+  invalid?: boolean
+}
 
 const FileInput = React.forwardRef<HTMLInputElement, FileInputProps>(
-  ({ className, variant, size, ...props }, ref) => {
+  ({ className, variant, size, invalid, ...props }, ref) => {
     return (
       <input
         type="file"
@@ -46,6 +48,8 @@ const FileInput = React.forwardRef<HTMLInputElement, FileInputProps>(
           className,
         )}
         ref={ref}
+        aria-invalid={invalid ?? undefined}
+        data-invalid={invalid ?? undefined}
         {...props}
       />
     )

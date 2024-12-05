@@ -6,7 +6,7 @@ export default function InputDemo() {
       type="email"
       placeholder="Email"
       defaultValue="invalid@email.com"
-      data-invalid
+      invalid
     />
   )
 }
