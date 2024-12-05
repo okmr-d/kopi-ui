@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils"
 import { cva, VariantProps } from "class-variance-authority"
 import * as React from "react"
 
-const labelVariants = cva(
+export const labelVariants = cva(
   "select-none text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-50",
 )
 

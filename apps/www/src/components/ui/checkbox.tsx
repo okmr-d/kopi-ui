@@ -8,7 +8,7 @@ import { CheckIcon, MinusIcon } from "lucide-react"
 
 export const checkboxVariants = cva(
   [
-    "peer group relative inline-flex shrink-0 appearance-none border",
+    "peer inline-flex items-center justify-center shrink-0 appearance-none border",
     "focus-visible:outline-none focus-visible:ring-offset-1 focus-visible:ring-[2px] focus-visible:ring-ring",
     "disabled:cursor-not-allowed disabled:opacity-50",
     "data-[invalid]:border-destructive data-[invalid]:focus-visible:border-destructive data-[invalid]:data-[state=checked]:border-destructive data-[invalid]:focus-visible:ring-destructive data-[invalid]:data-[state=checked]:bg-destructive data-[invalid]:data-[state=checked]:text-destructive-foreground",
@@ -70,7 +70,7 @@ const Checkbox = React.forwardRef<
     data-invalid={invalid ?? undefined}
     {...props}
   >
-    <CheckboxPrimitive.Indicator className="absolute inset-0 flex items-center justify-center">
+    <CheckboxPrimitive.Indicator className="flex items-center justify-center">
       {props.checked === "indeterminate" ? (
         <MinusIcon className={checkboxIconVariants({ size })} />
       ) : (

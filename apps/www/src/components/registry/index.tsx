@@ -354,6 +354,17 @@ export const Index: Record<string, any> = {
         ),
     ),
   },
+  "checkbox-card": {
+    name: "checkbox-card",
+    files: [
+      {
+        path: "src/components/registry/examples/checkbox/checkbox-card.tsx",
+      },
+    ],
+    component: React.lazy(
+      () => import("@/components/registry/examples/checkbox/checkbox-card"),
+    ),
+  },
   label: {
     name: "label",
     files: [
