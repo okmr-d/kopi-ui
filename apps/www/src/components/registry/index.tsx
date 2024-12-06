@@ -386,4 +386,68 @@ export const Index: Record<string, any> = {
       () => import("@/components/registry/examples/label/label-default"),
     ),
   },
+  "radio-group": {
+    name: "radio-group",
+    files: [
+      {
+        fileName: "radio-group",
+        path: "src/components/ui/radio-group.tsx",
+      },
+    ],
+    component: React.lazy(() => import("@/components/ui/radio-group")),
+  },
+  "radio-group-default": {
+    name: "radio-group-default",
+    files: [
+      {
+        path: "src/components/registry/examples/radio-group/radio-group-default.tsx",
+      },
+    ],
+    component: React.lazy(
+      () =>
+        import(
+          "@/components/registry/examples/radio-group/radio-group-default"
+        ),
+    ),
+  },
+  "radio-group-disabled": {
+    name: "radio-group-disabled",
+    files: [
+      {
+        path: "src/components/registry/examples/radio-group/radio-group-disabled.tsx",
+      },
+    ],
+    component: React.lazy(
+      () =>
+        import(
+          "@/components/registry/examples/radio-group/radio-group-disabled"
+        ),
+    ),
+  },
+  "radio-group-variants": {
+    name: "radio-group-variants",
+    files: [
+      {
+        path: "src/components/registry/examples/radio-group/radio-group-variants.tsx",
+      },
+    ],
+    component: React.lazy(
+      () =>
+        import(
+          "@/components/registry/examples/radio-group/radio-group-variants"
+        ),
+    ),
+  },
+  "radio-group-sizes": {
+    name: "radio-group-sizes",
+    files: [
+      {
+        path: "src/components/registry/examples/radio-group/radio-group-sizes.tsx",
+      },
+    ],
+    component: React.lazy(
+      () =>
+        import("@/components/registry/examples/radio-group/radio-group-sizes"),
+    ),
+  },
 }

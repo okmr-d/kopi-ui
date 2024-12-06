@@ -47,7 +47,7 @@ export const checkboxIconVariants = cva("stroke-[3px]", {
   },
 })
 
-export interface NativeSelectProps
+export interface CheckboxProps
   extends React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>,
     VariantProps<typeof checkboxVariants> {
   invalid?: boolean
@@ -55,7 +55,7 @@ export interface NativeSelectProps
 
 const Checkbox = React.forwardRef<
   React.ElementRef<typeof CheckboxPrimitive.Root>,
-  NativeSelectProps
+  CheckboxProps
 >(({ className, variant, size, invalid, ...props }, ref) => (
   <CheckboxPrimitive.Root
     ref={ref}
@@ -79,6 +79,6 @@ const Checkbox = React.forwardRef<
     </CheckboxPrimitive.Indicator>
   </CheckboxPrimitive.Root>
 ))
-Checkbox.displayName = "Checkbox"
+Checkbox.displayName = CheckboxPrimitive.Root.displayName
 
 export { Checkbox }
