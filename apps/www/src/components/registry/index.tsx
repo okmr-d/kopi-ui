@@ -450,4 +450,16 @@ export const Index: Record<string, any> = {
         import("@/components/registry/examples/radio-group/radio-group-sizes"),
     ),
   },
+  "radio-group-card": {
+    name: "radio-group-card",
+    files: [
+      {
+        path: "src/components/registry/examples/radio-group/radio-group-card.tsx",
+      },
+    ],
+    component: React.lazy(
+      () =>
+        import("@/components/registry/examples/radio-group/radio-group-card"),
+    ),
+  },
 }
