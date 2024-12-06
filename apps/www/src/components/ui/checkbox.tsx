@@ -16,7 +16,7 @@ export const checkboxVariants = cva(
   {
     variants: {
       variant: {
-        outline:
+        solid:
           "border-input bg-background data-[state=checked]:border-primary data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground data-[state=indeterminate]:border-primary data-[state=indeterminate]:bg-primary data-[state=indeterminate]:text-primary-foreground",
         filled:
           "border-transparent bg-accent data-[state=checked]:text-accent-foreground data-[state=indeterminate]:text-accent-foreground",
@@ -28,7 +28,7 @@ export const checkboxVariants = cva(
       },
     },
     defaultVariants: {
-      variant: "outline",
+      variant: "solid",
       size: "md",
     },
   },
