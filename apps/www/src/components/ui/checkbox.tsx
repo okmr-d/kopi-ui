@@ -9,14 +9,14 @@ import { CheckIcon, MinusIcon } from "lucide-react"
 export const checkboxVariants = cva(
   [
     "peer inline-flex items-center justify-center shrink-0 appearance-none border",
-    "focus-visible:outline-none focus-visible:ring-offset-1 focus-visible:ring-[2px] focus-visible:ring-ring",
+    "focus-visible:outline-none focus-visible:ring-offset-2 focus-visible:ring-[2px] focus-visible:ring-ring",
     "disabled:cursor-not-allowed disabled:opacity-50",
     "data-[invalid]:border-destructive data-[invalid]:focus-visible:border-destructive data-[invalid]:data-[state=checked]:border-destructive data-[invalid]:focus-visible:ring-destructive data-[invalid]:data-[state=checked]:bg-destructive data-[invalid]:data-[state=checked]:text-destructive-foreground",
   ],
   {
     variants: {
       variant: {
-        outline:
+        solid:
           "border-input bg-background data-[state=checked]:border-primary data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground data-[state=indeterminate]:border-primary data-[state=indeterminate]:bg-primary data-[state=indeterminate]:text-primary-foreground",
         filled:
           "border-transparent bg-accent data-[state=checked]:text-accent-foreground data-[state=indeterminate]:text-accent-foreground",
@@ -28,7 +28,7 @@ export const checkboxVariants = cva(
       },
     },
     defaultVariants: {
-      variant: "outline",
+      variant: "solid",
       size: "md",
     },
   },
@@ -47,7 +47,7 @@ export const checkboxIconVariants = cva("stroke-[3px]", {
   },
 })
 
-export interface NativeSelectProps
+export interface CheckboxProps
   extends React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>,
     VariantProps<typeof checkboxVariants> {
   invalid?: boolean
@@ -55,7 +55,7 @@ export interface NativeSelectProps
 
 const Checkbox = React.forwardRef<
   React.ElementRef<typeof CheckboxPrimitive.Root>,
-  NativeSelectProps
+  CheckboxProps
 >(({ className, variant, size, invalid, ...props }, ref) => (
   <CheckboxPrimitive.Root
     ref={ref}
@@ -79,6 +79,6 @@ const Checkbox = React.forwardRef<
     </CheckboxPrimitive.Indicator>
   </CheckboxPrimitive.Root>
 ))
-Checkbox.displayName = "Checkbox"
+Checkbox.displayName = CheckboxPrimitive.Root.displayName
 
 export { Checkbox }

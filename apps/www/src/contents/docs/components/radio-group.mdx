@@ -1,0 +1,72 @@
+---
+title: Radio Group
+description: Displays a radio group.
+component: true
+---
+
+<ComponentPreview
+  name="radio-group-default"
+  description="A radio group component."
+/>
+
+## Installation
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @radix-ui/react-radio-group
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="radio-group" title="components/ui/radio-group.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+## Usage
+
+```tsx
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
+import { Label } from "@/components/ui/label"
+```
+
+```tsx
+<RadioGroup defaultValue="option-1">
+  <div className="flex items-center space-x-2">
+    <RadioGroupItem value="option-1" id="option-1" />
+    <Label htmlFor="option-1">Option 1</Label>
+  </div>
+  <div className="flex items-center space-x-2">
+    <RadioGroupItem value="option-2" id="option-2" />
+    <Label htmlFor="option-2">Option 2</Label>
+  </div>
+</RadioGroup>
+```
+
+## Examples
+
+### Variants
+
+Use the `variant` prop to change the visual style of the checkbox.
+
+<ComponentPreview name="radio-group-variants" />
+
+### Sizes
+
+Use the `size` prop to change the size of the checkbox.
+
+<ComponentPreview name="radio-group-sizes" />
+
+### Disabled
+
+Use the `disabled` prop to show the checkbox in a disabled state.
+
+<ComponentPreview name="radio-group-disabled" />
+
+### Radio Card
+
+<ComponentPreview name="radio-group-card" />

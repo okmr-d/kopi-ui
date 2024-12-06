@@ -55,6 +55,11 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
+          title: "Radio Group",
+          href: "/docs/components/radio-group",
+          items: [],
+        },
+        {
           title: "Select (Native)",
           href: "/docs/components/native-select",
           items: [],
