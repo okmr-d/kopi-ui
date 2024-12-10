@@ -462,4 +462,47 @@ export const Index: Record<string, any> = {
         import("@/components/registry/examples/radio-group/radio-group-card"),
     ),
   },
+  select: {
+    name: "select",
+    files: [
+      {
+        fileName: "select",
+        path: "src/components/ui/select.tsx",
+      },
+    ],
+    component: React.lazy(() => import("@/components/ui/select")),
+  },
+  "select-default": {
+    name: "select-default",
+    files: [
+      {
+        path: "src/components/registry/examples/select/select-default.tsx",
+      },
+    ],
+    component: React.lazy(
+      () => import("@/components/registry/examples/select/select-default"),
+    ),
+  },
+  "select-variants": {
+    name: "select-variants",
+    files: [
+      {
+        path: "src/components/registry/examples/select/select-variants.tsx",
+      },
+    ],
+    component: React.lazy(
+      () => import("@/components/registry/examples/select/select-variants"),
+    ),
+  },
+  "select-sizes": {
+    name: "select-sizes",
+    files: [
+      {
+        path: "src/components/registry/examples/select/select-sizes.tsx",
+      },
+    ],
+    component: React.lazy(
+      () => import("@/components/registry/examples/select/select-sizes"),
+    ),
+  },
 }
