@@ -60,6 +60,11 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
+          title: "Select",
+          href: "/docs/components/select",
+          items: [],
+        },
+        {
           title: "Select (Native)",
           href: "/docs/components/native-select",
           items: [],
