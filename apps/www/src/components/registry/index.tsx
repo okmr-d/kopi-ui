@@ -69,6 +69,28 @@ export const Index: Record<string, any> = {
       () => import("@/components/registry/examples/input/input-sizes"),
     ),
   },
+  "input-password": {
+    name: "input-password",
+    files: [
+      {
+        path: "src/components/registry/examples/input/input-password.tsx",
+      },
+    ],
+    component: React.lazy(
+      () => import("@/components/registry/examples/input/input-password"),
+    ),
+  },
+  "input-with-icon": {
+    name: "input-with-icon",
+    files: [
+      {
+        path: "src/components/registry/examples/input/input-with-icon.tsx",
+      },
+    ],
+    component: React.lazy(
+      () => import("@/components/registry/examples/input/input-with-icon"),
+    ),
+  },
   "file-input": {
     name: "file-input",
     files: [
