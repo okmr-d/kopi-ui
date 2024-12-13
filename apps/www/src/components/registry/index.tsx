@@ -549,4 +549,46 @@ export const Index: Record<string, any> = {
       () => import("@/components/registry/examples/select/select-error"),
     ),
   },
+  switch: {
+    name: "switch",
+    files: [
+      {
+        path: "src/components/ui/switch.tsx",
+      },
+    ],
+    component: React.lazy(() => import("@/components/ui/switch")),
+  },
+  "switch-default": {
+    name: "switch-default",
+    files: [
+      {
+        path: "src/components/registry/examples/switch/switch-default.tsx",
+      },
+    ],
+    component: React.lazy(
+      () => import("@/components/registry/examples/switch/switch-default"),
+    ),
+  },
+  "switch-disabled": {
+    name: "switch-disabled",
+    files: [
+      {
+        path: "src/components/registry/examples/switch/switch-disabled.tsx",
+      },
+    ],
+    component: React.lazy(
+      () => import("@/components/registry/examples/switch/switch-disabled"),
+    ),
+  },
+  "switch-card": {
+    name: "switch-card",
+    files: [
+      {
+        path: "src/components/registry/examples/switch/switch-card.tsx",
+      },
+    ],
+    component: React.lazy(
+      () => import("@/components/registry/examples/switch/switch-card"),
+    ),
+  },
 }

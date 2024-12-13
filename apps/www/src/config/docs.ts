@@ -69,6 +69,11 @@ export const docsConfig: DocsConfig = {
           href: "/docs/components/native-select",
           items: [],
         },
+        {
+          title: "Switch",
+          href: "/docs/components/switch",
+          items: [],
+        },
       ],
     },
   ],
