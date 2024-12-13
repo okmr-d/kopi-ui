@@ -37,7 +37,6 @@ export const nativeSelectVariants = cva(
 export const nativeSelectIconVariants = cva("", {
   variants: {
     size: {
-      xs: "size-3",
       sm: "size-3.5",
       md: "size-4",
       lg: "size-[1.25rem]",

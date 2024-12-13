@@ -1,0 +1,71 @@
+---
+title: Select
+description: Displays a form select field or a component that looks like a select field.
+component: true
+---
+
+<ComponentPreview
+  name="select-default"
+  description="A form select component."
+/>
+
+## Installation
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="select" title="components/ui/select.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+## Usage
+
+```tsx
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
+```
+
+```tsx
+<Select>
+  <SelectTrigger>
+    <SelectValue placeholder="Select an option" />
+  </SelectTrigger>
+  <SelectContent>
+    <SelectItem value="option1">Option 1</SelectItem>
+    <SelectItem value="option2">Option 2</SelectItem>
+    <SelectItem value="option3">Option 3</SelectItem>
+  </SelectContent>
+</Select>
+```
+
+## Examples
+
+### Variants
+
+Use the `variant` prop to change the visual style of the select field.
+
+<ComponentPreview name="select-variants" />
+
+### Placeholder
+
+<ComponentPreview name="select-placeholder" />
+
+### Disabled
+
+Use the `disabled` prop to disable the select field.
+
+<ComponentPreview name="select-disabled" />
+
+### Error
+
+Use the `invalid` prop to change the select field to an error state.
+
+<ComponentPreview name="select-error" />

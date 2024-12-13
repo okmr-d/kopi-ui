@@ -484,4 +484,69 @@ export const Index: Record<string, any> = {
         import("@/components/registry/examples/radio-group/radio-group-card"),
     ),
   },
+  select: {
+    name: "select",
+    files: [
+      {
+        fileName: "select",
+        path: "src/components/ui/select.tsx",
+      },
+    ],
+    component: React.lazy(() => import("@/components/ui/select")),
+  },
+  "select-default": {
+    name: "select-default",
+    files: [
+      {
+        path: "src/components/registry/examples/select/select-default.tsx",
+      },
+    ],
+    component: React.lazy(
+      () => import("@/components/registry/examples/select/select-default"),
+    ),
+  },
+  "select-variants": {
+    name: "select-variants",
+    files: [
+      {
+        path: "src/components/registry/examples/select/select-variants.tsx",
+      },
+    ],
+    component: React.lazy(
+      () => import("@/components/registry/examples/select/select-variants"),
+    ),
+  },
+  "select-placeholder": {
+    name: "select-placeholder",
+    files: [
+      {
+        path: "src/components/registry/examples/select/select-placeholder.tsx",
+      },
+    ],
+    component: React.lazy(
+      () => import("@/components/registry/examples/select/select-placeholder"),
+    ),
+  },
+  "select-disabled": {
+    name: "select-disabled",
+    files: [
+      {
+        path: "src/components/registry/examples/select/select-disabled.tsx",
+      },
+    ],
+    component: React.lazy(
+      () => import("@/components/registry/examples/select/select-disabled"),
+    ),
+  },
+  "select-error": {
+    name: "select-error",
+    files: [
+      {
+        path: "src/components/registry/examples/select/select-error.tsx",
+      },
+    ],
+    component: React.lazy(
+      () => import("@/components/registry/examples/select/select-error"),
+    ),
+  },
 }
