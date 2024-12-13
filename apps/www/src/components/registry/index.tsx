@@ -494,15 +494,37 @@ export const Index: Record<string, any> = {
       () => import("@/components/registry/examples/select/select-variants"),
     ),
   },
-  "select-sizes": {
-    name: "select-sizes",
+  "select-placeholder": {
+    name: "select-placeholder",
     files: [
       {
-        path: "src/components/registry/examples/select/select-sizes.tsx",
+        path: "src/components/registry/examples/select/select-placeholder.tsx",
       },
     ],
     component: React.lazy(
-      () => import("@/components/registry/examples/select/select-sizes"),
+      () => import("@/components/registry/examples/select/select-placeholder"),
+    ),
+  },
+  "select-disabled": {
+    name: "select-disabled",
+    files: [
+      {
+        path: "src/components/registry/examples/select/select-disabled.tsx",
+      },
+    ],
+    component: React.lazy(
+      () => import("@/components/registry/examples/select/select-disabled"),
+    ),
+  },
+  "select-error": {
+    name: "select-error",
+    files: [
+      {
+        path: "src/components/registry/examples/select/select-error.tsx",
+      },
+    ],
+    component: React.lazy(
+      () => import("@/components/registry/examples/select/select-error"),
     ),
   },
 }

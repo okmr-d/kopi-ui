@@ -9,9 +9,9 @@ import {
 export default function SelectDemo() {
   return (
     <div className="w-full max-w-xs">
-      <Select defaultValue="option1">
+      <Select>
         <SelectTrigger>
-          <SelectValue />
+          <SelectValue placeholder="Select an option" />
         </SelectTrigger>
         <SelectContent>
           <SelectItem value="option1">Option 1</SelectItem>
