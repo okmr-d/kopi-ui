@@ -67,8 +67,8 @@ const NativeSelect = React.forwardRef<HTMLSelectElement, NativeSelectProps>(
             className,
           )}
           ref={ref}
-          aria-invalid={invalid ?? undefined}
-          data-invalid={invalid ?? undefined}
+          aria-invalid={invalid || undefined}
+          data-invalid={invalid || undefined}
           {...props}
         />
         {!props.multiple && (

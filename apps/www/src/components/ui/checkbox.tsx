@@ -66,8 +66,8 @@ const Checkbox = React.forwardRef<
       }),
       className,
     )}
-    aria-invalid={invalid ?? undefined}
-    data-invalid={invalid ?? undefined}
+    aria-invalid={invalid || undefined}
+    data-invalid={invalid || undefined}
     {...props}
   >
     <CheckboxPrimitive.Indicator className="flex items-center justify-center">

@@ -89,7 +89,7 @@ const SelectTrigger = React.forwardRef<
     <SelectPrimitive.Trigger
       ref={ref}
       className={cn(selectTriggerVariants({ variant }), className)}
-      data-invalid={invalid ?? undefined}
+      data-invalid={invalid || undefined}
       {...props}
     >
       {children}

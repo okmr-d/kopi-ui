@@ -55,8 +55,8 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
           className,
         )}
         ref={ref}
-        aria-invalid={invalid ?? undefined}
-        data-invalid={invalid ?? undefined}
+        aria-invalid={invalid || undefined}
+        data-invalid={invalid || undefined}
         {...props}
       />
     )
