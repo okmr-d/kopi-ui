@@ -74,6 +74,11 @@ export const docsConfig: DocsConfig = {
           href: "/docs/components/switch",
           items: [],
         },
+        {
+          title: "Textarea",
+          href: "/docs/components/textarea",
+          items: [],
+        },
       ],
     },
   ],
