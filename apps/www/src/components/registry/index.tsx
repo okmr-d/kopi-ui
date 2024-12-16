@@ -656,4 +656,81 @@ export const Index: Record<string, any> = {
       () => import("@/components/registry/examples/textarea/textarea-sizes"),
     ),
   },
+  button: {
+    name: "button",
+    files: [
+      {
+        fileName: "button",
+        path: "src/components/ui/button.tsx",
+      },
+    ],
+    component: React.lazy(() => import("@/components/ui/button")),
+  },
+  "button-default": {
+    name: "button-default",
+    files: [
+      {
+        path: "src/components/registry/examples/button/button-default.tsx",
+      },
+    ],
+    component: React.lazy(
+      () => import("@/components/registry/examples/button/button-default"),
+    ),
+  },
+  "button-icon": {
+    name: "button-icon",
+    files: [
+      {
+        path: "src/components/registry/examples/button/button-icon.tsx",
+      },
+    ],
+    component: React.lazy(
+      () => import("@/components/registry/examples/button/button-icon"),
+    ),
+  },
+  "button-disabled": {
+    name: "button-disabled",
+    files: [
+      {
+        path: "src/components/registry/examples/button/button-disabled.tsx",
+      },
+    ],
+    component: React.lazy(
+      () => import("@/components/registry/examples/button/button-disabled"),
+    ),
+  },
+  "button-variants": {
+    name: "button-variants",
+    files: [
+      {
+        path: "src/components/registry/examples/button/button-variants.tsx",
+      },
+    ],
+    component: React.lazy(
+      () => import("@/components/registry/examples/button/button-variants"),
+    ),
+  },
+  "button-sizes": {
+    name: "button-sizes",
+    files: [
+      {
+        path: "src/components/registry/examples/button/button-sizes.tsx",
+      },
+    ],
+    component: React.lazy(
+      () => import("@/components/registry/examples/button/button-sizes"),
+    ),
+  },
+
+  "button-with-icon": {
+    name: "button-with-icon",
+    files: [
+      {
+        path: "src/components/registry/examples/button/button-with-icon.tsx",
+      },
+    ],
+    component: React.lazy(
+      () => import("@/components/registry/examples/button/button-with-icon"),
+    ),
+  },
 }

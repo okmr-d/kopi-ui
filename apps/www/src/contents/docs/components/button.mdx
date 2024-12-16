@@ -1,0 +1,79 @@
+---
+title: Button
+description: Displays a button or a component that looks like a button.
+component: true
+---
+
+<ComponentPreview name="button-default" description="A button component." />
+
+## Installation
+
+<Steps>
+
+<Step>Install the following dependencies:</Step>
+
+```bash
+npm install @radix-ui/react-slot
+```
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="button" title="components/ui/button.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+## Usage
+
+```tsx
+import { Button } from "@/components/ui/button"
+```
+
+```tsx
+<Button></Button>
+```
+
+## Link
+
+You can use the `buttonVariants` helper to create a link that looks like a button.
+
+```tsx
+import { buttonVariants } from "@/components/ui/button"
+```
+
+```tsx
+<Link href="#" className={buttonVariants({ variant: "outline" })}>
+  Link
+</Link>
+```
+
+Alternatively, you can set the `asChild` parameter and nest the link component.
+
+```tsx
+<Button asChild>
+  <Link href="#">Link</Link>
+</Button>
+```
+
+## Examples
+
+### Variants
+
+<ComponentPreview name="button-variants" />
+
+### Sizes
+
+<ComponentPreview name="button-sizes" />
+
+### Icon
+
+<ComponentPreview name="button-icon" />
+
+### With Icon
+
+<ComponentPreview name="button-with-icon" />
+
+### Disabled
+
+<ComponentPreview name="button-disabled" />
