@@ -1,0 +1,59 @@
+---
+title: Textarea
+description: Displays a form textarea or a component that looks like a textarea.
+component: true
+---
+
+<ComponentPreview
+  name="textarea-default"
+  className="[&_textarea]:max-w-xs"
+  description="A form textarea component."
+/>
+
+## Installation
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="textarea" title="components/ui/textarea.tsx" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+## Usage
+
+```tsx
+import { Textarea } from "@/components/ui/textarea"
+```
+
+```tsx
+<Textarea />
+```
+
+## Examples
+
+### Variants
+
+Use the `variant` prop to change the visual style of the textarea.
+
+<ComponentPreview name="textarea-variants" className="[&_textarea]:max-w-xs" />
+
+### Sizes
+
+Use the `size` prop to change the size of the textarea.
+
+<ComponentPreview name="textarea-sizes" className="[&_textarea]:max-w-xs" />
+
+### Disabled
+
+Use the `disabled` prop to disable the textarea.
+
+<ComponentPreview name="textarea-disabled" className="[&_textarea]:max-w-xs" />
+
+### Error
+
+Use the `invalid` prop to change the textarea to an error state.
+
+<ComponentPreview name="textarea-error" className="[&_textarea]:max-w-xs" />

@@ -591,4 +591,69 @@ export const Index: Record<string, any> = {
       () => import("@/components/registry/examples/switch/switch-card"),
     ),
   },
+  textarea: {
+    name: "textarea",
+    files: [
+      {
+        fileName: "textarea",
+        path: "src/components/ui/textarea.tsx",
+      },
+    ],
+    component: React.lazy(() => import("@/components/ui/textarea")),
+  },
+  "textarea-default": {
+    name: "textarea-default",
+    files: [
+      {
+        path: "src/components/registry/examples/textarea/textarea-default.tsx",
+      },
+    ],
+    component: React.lazy(
+      () => import("@/components/registry/examples/textarea/textarea-default"),
+    ),
+  },
+  "textarea-error": {
+    name: "textarea-error",
+    files: [
+      {
+        path: "src/components/registry/examples/textarea/textarea-error.tsx",
+      },
+    ],
+    component: React.lazy(
+      () => import("@/components/registry/examples/textarea/textarea-error"),
+    ),
+  },
+  "textarea-disabled": {
+    name: "textarea-disabled",
+    files: [
+      {
+        path: "src/components/registry/examples/textarea/textarea-disabled.tsx",
+      },
+    ],
+    component: React.lazy(
+      () => import("@/components/registry/examples/textarea/textarea-disabled"),
+    ),
+  },
+  "textarea-variants": {
+    name: "textarea-variants",
+    files: [
+      {
+        path: "src/components/registry/examples/textarea/textarea-variants.tsx",
+      },
+    ],
+    component: React.lazy(
+      () => import("@/components/registry/examples/textarea/textarea-variants"),
+    ),
+  },
+  "textarea-sizes": {
+    name: "textarea-sizes",
+    files: [
+      {
+        path: "src/components/registry/examples/textarea/textarea-sizes.tsx",
+      },
+    ],
+    component: React.lazy(
+      () => import("@/components/registry/examples/textarea/textarea-sizes"),
+    ),
+  },
 }
