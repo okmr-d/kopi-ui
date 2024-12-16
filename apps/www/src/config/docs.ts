@@ -35,6 +35,11 @@ export const docsConfig: DocsConfig = {
       title: "Components",
       items: [
         {
+          title: "Button",
+          href: "/docs/components/button",
+          items: [],
+        },
+        {
           title: "Checkbox",
           href: "/docs/components/checkbox",
           items: [],
