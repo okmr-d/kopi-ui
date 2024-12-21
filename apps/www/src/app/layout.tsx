@@ -1,11 +1,33 @@
 import type { Metadata } from "next"
 import "@/styles/globals.css"
-import { META_THEME_COLORS } from "@/config/site"
+import { META_THEME_COLORS, siteConfig } from "@/config/site"
 import { ThemeProvider } from "next-themes"
+import { absoluteUrl } from "@/lib/utils"
 
 export const metadata: Metadata = {
-  title: "Kopi UI",
-  description: "React components for easy copy-paste use.",
+  title: siteConfig.name,
+  description: siteConfig.description,
+  openGraph: {
+    title: siteConfig.name,
+    description: siteConfig.description,
+    type: "article",
+    url: absoluteUrl(""),
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: siteConfig.name,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.name,
+    description: siteConfig.description,
+    images: [siteConfig.ogImage],
+    creator: "@okumura_daiki",
+  },
 }
 
 export default function RootLayout({
