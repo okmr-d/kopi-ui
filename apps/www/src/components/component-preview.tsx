@@ -110,7 +110,7 @@ export function ComponentPreview({
           </TabsList>
         )}
         <TabsPanel value="preview" className="relative rounded-md border">
-          <div className="flex items-center justify-between p-4">
+          <div className="flex items-center justify-end p-4">
             <div className="flex items-center gap-2">
               <CopyButton
                 value={codeString}
