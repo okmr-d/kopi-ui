@@ -21,7 +21,6 @@ export function rehypeComponent() {
 
         try {
           const component = Index["default"][name]
-          console.log(name)
 
           const src = component.files[0]?.path
 
@@ -37,8 +36,6 @@ export function rehypeComponent() {
           //   "@/components/",
           // )
           source = source.replaceAll("export default", "export")
-
-          console.log(node.children)
 
           // Add code as children so that rehype can take over at build time.
           node.children?.push(
