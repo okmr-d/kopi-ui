@@ -1,0 +1,94 @@
+---
+title: Toggle
+description: A two-state button that can be either on or off.
+component: true
+links:
+  doc: https://base-ui.com/react/components/toggle
+  api: https://base-ui.com/react/components/toggle#api-reference
+---
+
+🚧 Under development
+
+<ComponentPreview name="toggle-demo" description="A toggle component." />
+
+## Installation
+
+<Tabs defaultValue="manual">
+
+<TabsList>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="toggle" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import { Toggle, ToggleGroup } from "@/components/ui/toggle"
+```
+
+```tsx
+<Toggle>Toggle</Toggle>
+
+<ToggleGroup>
+  <Toggle value="a">A</Toggle>
+  <Toggle value="b">B</Toggle>
+  <Toggle value="c">C</Toggle>
+</ToggleGroup>
+```
+
+## Examples
+
+### Default
+
+<ComponentPreview name="toggle-demo" description="A toggle component." />
+
+### Outline
+
+<ComponentPreview
+  name="toggle-outline"
+  description="A toggle component using the outline variant."
+/>
+
+### With Text
+
+<ComponentPreview
+  name="toggle-with-text"
+  description="A toggle component with text."
+/>
+
+### Small
+
+<ComponentPreview name="toggle-sm" description="A small toggle component." />
+
+### Large
+
+<ComponentPreview name="toggle-lg" description="A large toggle component." />
+
+### Disabled
+
+<ComponentPreview
+  name="toggle-disabled"
+  description="A disabled toggle component."
+/>
+
+### Group
+
+<ComponentPreview
+  name="toggle-group-demo"
+  description="A toggle group with three items."
+/>

@@ -1,0 +1,64 @@
+---
+title: Tabs
+description: A set of layered sections of content—known as tab panels—that are displayed one at a time.
+component: true
+links:
+  doc: https://base-ui.com/react/components/tabs
+  api: https://base-ui.com/react/components/tabs#api-reference
+---
+
+🚧 Under development
+
+<ComponentPreview
+  name="tabs-demo"
+  description="A tabs component with two forms."
+/>
+
+## Installation
+
+<Tabs defaultValue="manual">
+
+<TabsList>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="tabs" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import { Tabs, TabsList, TabsPanel, TabsTab } from "@/components/ui/tabs"
+```
+
+```tsx
+<Tabs defaultValue="tab-1" className="w-[400px]">
+  <TabsList>
+    <TabsTab value="tab-1">Tab 1</TabsTab>
+    <TabsTab value="tab-2">Tab 2</TabsTab>
+  </TabsList>
+  <TabsPanel value="tab-1">Content for Tab 1</TabsPanel>
+  <TabsPanel value="tab-2">Content for Tab 2</TabsPanel>
+</Tabs>
+```
+
+## Examples
+
+### Custom Design
+
+<ComponentPreview name="tabs-custom-1" />
+
+<ComponentPreview name="tabs-custom-2" />

@@ -9,12 +9,7 @@ import { NpmCommands } from "@/types/unist"
 import { cn } from "@/lib/utils"
 import { ComponentSource } from "@/components/component-source"
 import { CopyButton, CopyNpmCommandButton } from "@/components/copy-button"
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/components/shadcn-ui/tabs"
+import { Tabs, TabsList, TabsPanel, TabsTab } from "@/components/ui/tabs"
 import { ComponentPreview } from "./component-preview"
 
 const components = {
@@ -238,10 +233,10 @@ const components = {
   TabsTrigger: ({
     className,
     ...props
-  }: React.ComponentProps<typeof TabsTrigger>) => (
-    <TabsTrigger
+  }: React.ComponentProps<typeof TabsTab>) => (
+    <TabsTab
       className={cn(
-        "relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent px-4 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none",
+        "relative rounded-none pb-2.5 after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 data-[selected]:bg-transparent data-[selected]:shadow-none data-[selected]:after:bg-primary",
         className,
       )}
       {...props}
@@ -250,8 +245,8 @@ const components = {
   TabsContent: ({
     className,
     ...props
-  }: React.ComponentProps<typeof TabsContent>) => (
-    <TabsContent className={cn("relative", className)} {...props} />
+  }: React.ComponentProps<typeof TabsPanel>) => (
+    <TabsPanel className={cn("relative", className)} {...props} />
   ),
   Link: ({ className, ...props }: React.ComponentProps<typeof Link>) => (
     <Link

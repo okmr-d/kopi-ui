@@ -16,7 +16,7 @@ Components are styled using Tailwind CSS. You need to install Tailwind CSS in yo
 Add the following dependencies to your project:
 
 ```bash
-npm install class-variance-authority clsx tailwind-merge lucide-react
+npm install @base-ui-components/react class-variance-authority clsx tailwind-merge lucide-react
 ```
 
 ### Configure path aliases
@@ -89,7 +89,7 @@ module.exports = {
       },
     },
   },
-};
+}
 ```
 
 ### Configure styles
@@ -161,11 +161,11 @@ Add the following to your globals.css file.
 ### Add a cn helper
 
 ```ts title="lib/utils.ts" showLineNumbers
-import { clsx, type ClassValue } from "clsx";
-import { twMerge } from "tailwind-merge";
+import { clsx, type ClassValue } from "clsx"
+import { twMerge } from "tailwind-merge"
 
 export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs));
+  return twMerge(clsx(inputs))
 }
 ```
 

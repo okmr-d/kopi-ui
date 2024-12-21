@@ -1,84 +1,76 @@
 "use client"
 
-import * as CheckboxPrimitive from "@radix-ui/react-checkbox"
 import * as React from "react"
+import { CheckboxGroup as CheckboxGroupPrimitive } from "@base-ui-components/react/checkbox-group"
+import { Checkbox as CheckboxPrimitive } from "@base-ui-components/react/checkbox"
+
 import { cn } from "@/lib/utils"
-import { cva, VariantProps } from "class-variance-authority"
-import { CheckIcon, MinusIcon } from "lucide-react"
 
-export const checkboxVariants = cva(
-  [
-    "peer inline-flex items-center justify-center shrink-0 appearance-none border",
-    "focus-visible:outline-none focus-visible:ring-offset-2 focus-visible:ring-[2px] focus-visible:ring-ring",
-    "disabled:cursor-not-allowed disabled:opacity-50",
-    "data-[invalid]:border-destructive data-[invalid]:focus-visible:border-destructive data-[invalid]:data-[state=checked]:border-destructive data-[invalid]:focus-visible:ring-destructive data-[invalid]:data-[state=checked]:bg-destructive data-[invalid]:data-[state=checked]:text-destructive-foreground",
-  ],
-  {
-    variants: {
-      variant: {
-        solid:
-          "border-input bg-background data-[state=checked]:border-primary data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground data-[state=indeterminate]:border-primary data-[state=indeterminate]:bg-primary data-[state=indeterminate]:text-primary-foreground",
-        filled:
-          "border-transparent bg-accent data-[state=checked]:text-accent-foreground data-[state=indeterminate]:text-accent-foreground",
-      },
-      size: {
-        sm: "size-4 rounded-sm",
-        md: "size-5 rounded-sm",
-        lg: "size-6 rounded-sm",
-      },
-    },
-    defaultVariants: {
-      variant: "solid",
-      size: "md",
-    },
-  },
-)
-
-export const checkboxIconVariants = cva("stroke-[3px]", {
-  variants: {
-    size: {
-      sm: "size-3",
-      md: "size-4",
-      lg: "size-5",
-    },
-  },
-  defaultVariants: {
-    size: "md",
-  },
+const CheckboxGroup = React.forwardRef<
+  React.ElementRef<typeof CheckboxGroupPrimitive>,
+  React.ComponentPropsWithoutRef<typeof CheckboxGroupPrimitive>
+>(({ className, ...props }, ref) => {
+  return (
+    <CheckboxGroupPrimitive
+      className={cn("flex flex-col items-start gap-2", className)}
+      {...props}
+      ref={ref}
+    />
+  )
 })
-
-export interface CheckboxProps
-  extends React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>,
-    VariantProps<typeof checkboxVariants> {
-  invalid?: boolean
-}
+CheckboxGroup.displayName = CheckboxGroupPrimitive.displayName
 
 const Checkbox = React.forwardRef<
   React.ElementRef<typeof CheckboxPrimitive.Root>,
-  CheckboxProps
->(({ className, variant, size, invalid, ...props }, ref) => (
+  React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>
+>(({ className, ...props }, ref) => (
   <CheckboxPrimitive.Root
     ref={ref}
     className={cn(
-      checkboxVariants({
-        variant,
-        size,
-      }),
+      "peer h-5 w-5 inline-flex items-center justify-center shrink-0 rounded-sm border border-input data-[checked]:border-primary data-[checked]:bg-primary outline-offset-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-ring data-[disabled]:cursor-not-allowed data-[disabled]:opacity-50 data-[invalid]:border-destructive data-[invalid]:data-[checked]:bg-destructive data-[invalid]:focus-visible:outline-destructive",
+      props.indeterminate && "border-primary bg-primary",
       className,
     )}
-    aria-invalid={invalid || undefined}
-    data-invalid={invalid || undefined}
     {...props}
   >
-    <CheckboxPrimitive.Indicator className="flex items-center justify-center">
-      {props.checked === "indeterminate" ? (
-        <MinusIcon className={checkboxIconVariants({ size })} />
+    <CheckboxPrimitive.Indicator
+      className={cn(
+        "flex data-[checked]:text-primary-foreground data-[invalid]:data-[checked]:text-destructive-foreground",
+        props.indeterminate && "text-primary-foreground",
+      )}
+    >
+      {props.indeterminate ? (
+        <svg
+          width="11"
+          height="11"
+          viewBox="0 0 9 9"
+          fill="currentcolor"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M0.75 4.5C0.75 4.08579 1.08579 3.75 1.5 3.75H7.5C7.91421 3.75 8.25 4.08579 8.25 4.5C8.25 4.91421 7.91421 5.25 7.5 5.25H1.5C1.08579 5.25 0.75 4.91421 0.75 4.5Z"
+          />
+        </svg>
       ) : (
-        <CheckIcon className={checkboxIconVariants({ size })} />
+        <svg
+          width="11"
+          height="11"
+          viewBox="0 0 9 9"
+          fill="currentcolor"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M8.53547 0.62293C8.88226 0.849446 8.97976 1.3142 8.75325 1.66099L4.5083 8.1599C4.38833 8.34356 4.19397 8.4655 3.9764 8.49358C3.75883 8.52167 3.53987 8.45309 3.3772 8.30591L0.616113 5.80777C0.308959 5.52987 0.285246 5.05559 0.563148 4.74844C0.84105 4.44128 1.31533 4.41757 1.62249 4.69547L3.73256 6.60459L7.49741 0.840706C7.72393 0.493916 8.18868 0.396414 8.53547 0.62293Z"
+          />
+        </svg>
       )}
     </CheckboxPrimitive.Indicator>
   </CheckboxPrimitive.Root>
 ))
 Checkbox.displayName = CheckboxPrimitive.Root.displayName
 
-export { Checkbox }
+export { CheckboxGroup, Checkbox }

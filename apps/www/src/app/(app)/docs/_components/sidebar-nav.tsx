@@ -52,16 +52,18 @@ export function DocsSidebarNavItems({
               "group flex w-full items-center px-2 py-1 font-normal text-foreground underline-offset-2 hover:underline",
               item.disabled && "cursor-not-allowed opacity-60",
               pathname === item.href && "underline",
+              item.label === "Coming Soon" &&
+                "text-muted-foreground opacity-50 ",
             )}
             target={item.external ? "_blank" : ""}
             rel={item.external ? "noreferrer" : ""}
           >
             {item.title}
-            {item.label && (
-              <span className="ml-2 rounded-md bg-[#adfa1d] px-1.5 py-0.5 text-xs leading-none text-[#000000] no-underline group-hover:no-underline">
+            {/* {item.label && (
+              <span className="ml-2 rounded-md bg-accent px-1.5 py-0.5 text-xs leading-none text-accent-foreground no-underline group-hover:no-underline">
                 {item.label}
               </span>
-            )}
+            )} */}
           </Link>
         ) : (
           <span
@@ -72,11 +74,11 @@ export function DocsSidebarNavItems({
             )}
           >
             {item.title}
-            {item.label && (
+            {/* {item.label && (
               <span className="ml-2 rounded-md bg-muted px-1.5 py-0.5 text-xs leading-none text-muted-foreground no-underline group-hover:no-underline">
                 {item.label}
               </span>
-            )}
+            )} */}
           </span>
         ),
       )}

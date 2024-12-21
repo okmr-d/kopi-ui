@@ -1,18 +1,19 @@
 "use client"
 
 import * as React from "react"
-import { DropdownMenuTriggerProps } from "@radix-ui/react-dropdown-menu"
 import { CheckIcon, CopyIcon } from "lucide-react"
 import { NpmCommands } from "@/types/unist"
 
 import { cn } from "@/lib/utils"
-import { Button, ButtonProps } from "@/components/shadcn-ui/button"
+import { Button, ButtonProps } from "@/components/ui/button"
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/shadcn-ui/dropdown-menu"
+  Menu,
+  MenuPopup,
+  MenuItem,
+  MenuTrigger,
+  MenuPortal,
+  MenuPositioner,
+} from "@/components/ui/menu"
 
 interface CopyButtonProps extends ButtonProps {
   value: string
@@ -38,7 +39,7 @@ export function CopyButton({
 
   return (
     <Button
-      size="icon"
+      size="icon-sm"
       variant={variant}
       className={cn(
         "relative z-10 h-6 w-6 text-neutral-50 hover:bg-neutral-700 hover:text-neutral-50",
@@ -60,72 +61,13 @@ export function CopyButton({
   )
 }
 
-interface CopyWithClassNamesProps extends DropdownMenuTriggerProps {
-  value: string
-  classNames: string
-  className?: string
-}
-
-export function CopyWithClassNames({
-  value,
-  classNames,
-  className,
-  ...props
-}: CopyWithClassNamesProps) {
-  const [hasCopied, setHasCopied] = React.useState(false)
-
-  React.useEffect(() => {
-    setTimeout(() => {
-      setHasCopied(false)
-    }, 2000)
-  }, [hasCopied])
-
-  const copyToClipboard = React.useCallback((value: string) => {
-    copyToClipboardWithMeta(value)
-    setHasCopied(true)
-  }, [])
-
-  return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button
-          size="icon"
-          variant="ghost"
-          className={cn(
-            "relative z-10 h-6 w-6 text-neutral-50 hover:bg-neutral-700 hover:text-neutral-50",
-            className,
-          )}
-          {...props}
-        >
-          {hasCopied ? (
-            <CheckIcon className="h-3 w-3" />
-          ) : (
-            <CopyIcon className="h-3 w-3" />
-          )}
-          <span className="sr-only">Copy</span>
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => copyToClipboard(value)}>
-          Component
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => copyToClipboard(classNames)}>
-          Classname
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
-  )
-}
-
-interface CopyNpmCommandButtonProps extends DropdownMenuTriggerProps {
-  commands: Required<NpmCommands>
-}
-
 export function CopyNpmCommandButton({
   commands,
   className,
-  ...props
-}: CopyNpmCommandButtonProps) {
+}: {
+  commands: Required<NpmCommands>
+  className?: string
+}) {
   const [hasCopied, setHasCopied] = React.useState(false)
 
   React.useEffect(() => {
@@ -140,39 +82,45 @@ export function CopyNpmCommandButton({
   }, [])
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button
-          size="icon"
-          variant="ghost"
-          className={cn(
-            "relative z-10 h-6 w-6 text-neutral-50 hover:bg-neutral-700 hover:text-neutral-50",
-            className,
-          )}
-          {...props}
-        >
-          {hasCopied ? (
-            <CheckIcon className="h-3 w-3" />
-          ) : (
-            <CopyIcon className="h-3 w-3" />
-          )}
-          <span className="sr-only">Copy</span>
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => copyCommand(commands.__npmCommand__)}>
-          npm
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => copyCommand(commands.__yarnCommand__)}>
-          yarn
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => copyCommand(commands.__pnpmCommand__)}>
-          pnpm
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => copyCommand(commands.__bunCommand__)}>
-          bun
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
+    <Menu>
+      <MenuTrigger
+        render={(props) => (
+          <Button
+            size="icon-sm"
+            variant="ghost"
+            className={cn(
+              "relative z-10 h-6 w-6 text-neutral-50 hover:bg-neutral-700 hover:text-neutral-50",
+              className,
+            )}
+            {...props}
+          >
+            {hasCopied ? (
+              <CheckIcon className="h-3 w-3" />
+            ) : (
+              <CopyIcon className="h-3 w-3" />
+            )}
+            <span className="sr-only">Copy</span>
+          </Button>
+        )}
+      />
+      <MenuPortal>
+        <MenuPositioner align="end">
+          <MenuPopup>
+            <MenuItem onClick={() => copyCommand(commands.__npmCommand__)}>
+              npm
+            </MenuItem>
+            <MenuItem onClick={() => copyCommand(commands.__yarnCommand__)}>
+              yarn
+            </MenuItem>
+            <MenuItem onClick={() => copyCommand(commands.__pnpmCommand__)}>
+              pnpm
+            </MenuItem>
+            <MenuItem onClick={() => copyCommand(commands.__bunCommand__)}>
+              bun
+            </MenuItem>
+          </MenuPopup>
+        </MenuPositioner>
+      </MenuPortal>
+    </Menu>
   )
 }

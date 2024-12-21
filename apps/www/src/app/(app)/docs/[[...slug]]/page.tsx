@@ -3,7 +3,8 @@ import { allDocs } from "contentlayer/generated"
 
 import "@/styles/mdx.css"
 import type { Metadata } from "next"
-import { ChevronRight } from "lucide-react"
+import Link from "next/link"
+import { ChevronRight, ExternalLink } from "lucide-react"
 import Balancer from "react-wrap-balancer"
 
 import { siteConfig } from "@/config/site"
@@ -12,6 +13,7 @@ import { absoluteUrl, cn } from "@/lib/utils"
 import { Mdx } from "@/components/mdx-components"
 import { DashboardTableOfContents } from "@/components/toc"
 import { DocsPager } from "../_components/pager"
+import { buttonVariants } from "@/components/ui/button"
 
 interface DocPageParams {
   slug: string[]
@@ -103,6 +105,38 @@ export default async function DocPage({
             </p>
           )}
         </div>
+        {doc.links ? (
+          <div className="flex items-center space-x-2 pt-4">
+            {doc.links?.doc && (
+              <Link
+                href={doc.links.doc}
+                target="_blank"
+                rel="noreferrer"
+                className={cn(
+                  buttonVariants({ variant: "secondary", size: "sm" }),
+                  "px-2.5 h-6 gap-1",
+                )}
+              >
+                Docs
+                <ExternalLink className="h-3 w-3" />
+              </Link>
+            )}
+            {doc.links?.api && (
+              <Link
+                href={doc.links.api}
+                target="_blank"
+                rel="noreferrer"
+                className={cn(
+                  buttonVariants({ variant: "secondary", size: "sm" }),
+                  "px-2.5 h-6 gap-1",
+                )}
+              >
+                API Reference
+                <ExternalLink className="h-3 w-3" />
+              </Link>
+            )}
+          </div>
+        ) : null}
         <div className="pb-12 pt-8">
           <Mdx code={doc.body.code} />
         </div>
