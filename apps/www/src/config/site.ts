@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Kopi UI",
   url: "https://kopi-ui.com",
-  ogImage: "https://kopi-ui.com/og.jpg",
+  ogImage: "https://kopi-ui.com/og.png",
   description:
     "Beautifully designed components that you can copy and paste into your apps. Accessible. Customizable. Open Source.",
   links: {

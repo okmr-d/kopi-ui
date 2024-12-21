@@ -41,11 +41,13 @@ export async function generateMetadata({
     return {}
   }
 
+  const title = doc.title + " | " + siteConfig.name
+
   return {
-    title: doc.title,
+    title: title,
     description: doc.description,
     openGraph: {
-      title: doc.title,
+      title: title,
       description: doc.description,
       type: "article",
       url: absoluteUrl(doc.slug),
@@ -60,7 +62,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: doc.title,
+      title: title,
       description: doc.description,
       images: [siteConfig.ogImage],
       creator: "@okumura_daiki",

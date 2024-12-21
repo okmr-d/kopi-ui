@@ -11,7 +11,7 @@ export default function IndexPage() {
       </h1>
       <p className="max-w-2xl text-balance text-lg font-light text-foreground">
         Beautifully designed components that you can copy and paste into your
-        apps. Made with Tailwind CSS. Open source.
+        apps. Made with Base UI and Tailwind CSS.
       </p>
       <div className="flex w-full items-center justify-start gap-2 py-2">
         <Link
