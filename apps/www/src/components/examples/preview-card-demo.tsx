@@ -1,6 +1,3 @@
-import { CalendarDays } from "lucide-react"
-
-import { Button, buttonVariants } from "@/components/ui/button"
 import {
   PreviewCard,
   PreviewCardArrow,

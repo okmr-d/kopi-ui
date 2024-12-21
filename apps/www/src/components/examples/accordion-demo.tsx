@@ -24,7 +24,8 @@ export default function AccordionDemo() {
       <AccordionItem value="item-3">
         <AccordionTrigger>Is it animated?</AccordionTrigger>
         <AccordionPanel>
-          Yes. It's animated by default, but you can disable it if you prefer.
+          Yes. It&apos;s animated by default, but you can disable it if you
+          prefer.
         </AccordionPanel>
       </AccordionItem>
     </Accordion>

@@ -1,7 +1,6 @@
 import Link from "next/link"
 import { siteConfig } from "@/config/site"
-import { Button, buttonVariants } from "@/components/ui/button"
-import { ArrowRight } from "lucide-react"
+import { buttonVariants } from "@/components/ui/button"
 import { Container } from "@/components/container"
 
 export default function IndexPage() {

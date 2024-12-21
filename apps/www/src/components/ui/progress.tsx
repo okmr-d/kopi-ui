@@ -13,7 +13,10 @@ const ProgressTrack = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <ProgressPrimitive.Track
     ref={ref}
-    className={cn("block h-2 w-full overflow-hidden rounded-full bg-secondary")}
+    className={cn(
+      "block h-2 w-full overflow-hidden rounded-full bg-secondary",
+      className,
+    )}
     {...props}
   />
 ))
@@ -29,5 +32,6 @@ const ProgressIndicator = React.forwardRef<
     {...props}
   />
 ))
+ProgressIndicator.displayName = ProgressPrimitive.Indicator.displayName
 
 export { Progress, ProgressTrack, ProgressIndicator }

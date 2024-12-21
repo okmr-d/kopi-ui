@@ -58,6 +58,7 @@ const PreviewCardArrow = React.forwardRef<
     </svg>
   </PreviewCardPrimitive.Arrow>
 ))
+PreviewCardArrow.displayName = PreviewCardPrimitive.Arrow.displayName
 
 export {
   PreviewCard,

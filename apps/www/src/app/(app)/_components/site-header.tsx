@@ -2,7 +2,7 @@ import Link from "next/link"
 
 import { siteConfig } from "@/config/site"
 import { Icons } from "@/components/icons"
-import { Button, buttonVariants } from "@/components/ui/button"
+import { buttonVariants } from "@/components/ui/button"
 import { Container } from "@/components/container"
 import { MainNav } from "./main-nav"
 import { MobileNav } from "./mobile-nav"
