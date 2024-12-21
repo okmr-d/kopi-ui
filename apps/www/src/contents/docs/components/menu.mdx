@@ -1,0 +1,82 @@
+---
+title: Menu
+description: Displays a menu to the user — such as a set of actions or functions — triggered by a button.
+featured: true
+component: true
+links:
+  doc: https://base-ui.com/react/components/menu
+  api: https://base-ui.com/react/components/menu#api-reference
+---
+
+🚧 Under development
+
+<ComponentPreview
+  name="menu-demo"
+  description="A menu with icons, shortcuts and sub menu items."
+/>
+
+## Installation
+
+<Tabs defaultValue="manual">
+
+<TabsList>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="menu" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/menu"
+```
+
+```tsx
+<DropdownMenu>
+  <DropdownMenuTrigger>Open</DropdownMenuTrigger>
+  <DropdownMenuContent>
+    <DropdownMenuLabel>My Account</DropdownMenuLabel>
+    <DropdownMenuSeparator />
+    <DropdownMenuItem>Profile</DropdownMenuItem>
+    <DropdownMenuItem>Billing</DropdownMenuItem>
+    <DropdownMenuItem>Team</DropdownMenuItem>
+    <DropdownMenuItem>Subscription</DropdownMenuItem>
+  </DropdownMenuContent>
+</DropdownMenu>
+```
+
+## Examples
+
+### Checkboxes
+
+<ComponentPreview
+  name="menu-checkboxes"
+  description="A menu with checkboxes."
+/>
+
+### Radio Group
+
+<ComponentPreview
+  name="menu-radio-group"
+  description="A menu with radio items."
+/>

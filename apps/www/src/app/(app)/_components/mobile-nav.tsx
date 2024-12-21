@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation"
 import { docsConfig } from "@/config/docs"
 import { cn } from "@/lib/utils"
 import { useMetaColor } from "@/hooks/use-meta-color"
-import { Button } from "@/components/shadcn-ui/button"
+import { Button } from "@/components/ui/button"
 import {
   Drawer,
   DrawerContent,

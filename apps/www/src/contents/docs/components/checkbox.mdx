@@ -1,28 +1,37 @@
 ---
 title: Checkbox
-description: Displays a checkbox.
+description: An easily stylable checkbox component.
 component: true
+links:
+  doc: https://base-ui.com/react/components/checkbox
+  api: https://base-ui.com/react/components/checkbox#api-reference
 ---
 
-<ComponentPreview name="checkbox-default" description="A checkbox component." />
+<ComponentPreview name="checkbox-demo" description="A checkbox" />
 
 ## Installation
 
+<Tabs defaultValue="manual">
+
+<TabsList>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="manual">
+
 <Steps>
-
-<Step>Install the following dependencies:</Step>
-
-```bash
-npm install @radix-ui/react-checkbox
-```
 
 <Step>Copy and paste the following code into your project.</Step>
 
-<ComponentSource name="checkbox" title="components/ui/checkbox.tsx" />
+<ComponentSource name="checkbox" />
 
 <Step>Update the import paths to match your project setup.</Step>
 
 </Steps>
+
+</TabsContent>
+
+</Tabs>
 
 ## Usage
 
@@ -36,36 +45,17 @@ import { Checkbox } from "@/components/ui/checkbox"
 
 ## Examples
 
-### Variants
+### With text
 
-Use the `variant` prop to change the visual style of the checkbox.
-
-<ComponentPreview name="checkbox-variants" />
-
-### Sizes
-
-Use the `size` prop to change the size of the checkbox.
-
-<ComponentPreview name="checkbox-sizes" />
+<ComponentPreview
+  name="checkbox-with-text"
+  description="A checkbox with label and description."
+/>
 
 ### Disabled
 
-Use the `disabled` prop to show the checkbox in a disabled state.
+<ComponentPreview name="checkbox-disabled" description="A disabled checkbox" />
 
-<ComponentPreview name="checkbox-disabled" />
+### Checkbox Group
 
-### Error
-
-Use the `invalid` prop to show the checkbox in an error state.
-
-<ComponentPreview name="checkbox-error" />
-
-### Indeterminate
-
-Set the `checked` prop to `indeterminate` to show the checkbox in an indeterminate state.
-
-<ComponentPreview name="checkbox-indeterminate" />
-
-### Checkbox Card
-
-<ComponentPreview name="checkbox-card" />
+<ComponentPreview name="checkbox-group" description="A group of checkboxes" />

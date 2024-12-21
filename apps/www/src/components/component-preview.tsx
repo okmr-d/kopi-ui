@@ -2,21 +2,19 @@
 
 import * as React from "react"
 import Image from "next/image"
+import { Index } from "@/__registry__"
 
 import { cn } from "@/lib/utils"
 import { CopyButton } from "@/components/copy-button"
 import { Icons } from "@/components/icons"
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/components/shadcn-ui/tabs"
-import { Index } from "./registry"
+import { Tabs, TabsPanel, TabsList, TabsTab } from "@/components/ui/tabs"
 
 interface ComponentPreviewProps extends React.HTMLAttributes<HTMLDivElement> {
   name: string
+  extractClassname?: boolean
+  extractedClassNames?: string
   align?: "center" | "start" | "end"
+  description?: string
   hideCode?: boolean
   type?: "block" | "component" | "example"
 }
@@ -26,7 +24,10 @@ export function ComponentPreview({
   type,
   children,
   className,
+  extractClassname,
+  extractedClassNames,
   align = "center",
+  description,
   hideCode = false,
   ...props
 }: ComponentPreviewProps) {
@@ -34,7 +35,7 @@ export function ComponentPreview({
   const Code = Codes[0]
 
   const Preview = React.useMemo(() => {
-    const Component = Index[name]?.component
+    const Component = Index["default"][name]?.component
 
     if (!Component) {
       return (
@@ -52,7 +53,9 @@ export function ComponentPreview({
   }, [name])
 
   const codeString = React.useMemo(() => {
-    if (typeof Code?.props["data-rehype-pretty-code-figure"] !== "undefined") {
+    if (
+      typeof Code?.props["data-rehype-pretty-code-fragment"] !== "undefined"
+    ) {
       const [Button] = React.Children.toArray(
         Code.props.children,
       ) as React.ReactElement[]
@@ -89,29 +92,36 @@ export function ComponentPreview({
       className={cn("group relative my-4 flex flex-col space-y-2", className)}
       {...props}
     >
-      <Tabs defaultValue="preview" className="relative mr-auto w-full">
-        <div className="flex items-center justify-between pb-3">
-          {!hideCode && (
-            <TabsList className="w-full justify-start rounded-none border-b bg-transparent p-0 h-9">
-              <TabsTrigger
-                value="preview"
-                className="relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent px-4 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none"
-              >
-                Preview
-              </TabsTrigger>
-              <TabsTrigger
-                value="code"
-                className="relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent px-4 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none"
-              >
-                Code
-              </TabsTrigger>
-            </TabsList>
-          )}
-        </div>
-        <TabsContent value="preview" className="relative rounded-md border">
+      <Tabs defaultValue="preview">
+        {!hideCode && (
+          <TabsList className="w-full justify-start rounded-none border-b border-border bg-transparent p-0">
+            <TabsTab
+              value="preview"
+              className="relative rounded-none pb-2.5 after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 data-[selected]:bg-transparent data-[selected]:shadow-none data-[selected]:after:bg-primary"
+            >
+              Preview
+            </TabsTab>
+            <TabsTab
+              value="code"
+              className="relative rounded-none pb-2.5 after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 data-[selected]:bg-transparent data-[selected]:shadow-none data-[selected]:after:bg-primary"
+            >
+              Code
+            </TabsTab>
+          </TabsList>
+        )}
+        <TabsPanel value="preview" className="relative rounded-md border">
+          <div className="flex items-center justify-end p-4">
+            <div className="flex items-center gap-2">
+              <CopyButton
+                value={codeString}
+                variant="outline"
+                className="h-7 w-7 text-foreground opacity-100 hover:bg-muted hover:text-foreground [&_svg]:h-3.5 [&_svg]:w-3.5"
+              />
+            </div>
+          </div>
           <div
             className={cn(
-              "preview flex min-h-[200px] w-full justify-center p-10",
+              "preview flex min-h-[350px] w-full justify-center p-10",
               {
                 "items-center": align === "center",
                 "items-start": align === "start",
@@ -127,22 +137,17 @@ export function ComponentPreview({
                 </div>
               }
             >
-              <CopyButton
-                value={codeString}
-                variant="outline"
-                className="text-foreground opacity-100 hover:bg-muted hover:text-foreground absolute right-4 top-4"
-              />
               {Preview}
             </React.Suspense>
           </div>
-        </TabsContent>
-        <TabsContent value="code">
+        </TabsPanel>
+        <TabsPanel value="code" className="relative rounded-md border">
           <div className="flex flex-col space-y-4">
             <div className="w-full rounded-md [&_pre]:my-0 [&_pre]:max-h-[350px] [&_pre]:overflow-auto">
               {Code}
             </div>
           </div>
-        </TabsContent>
+        </TabsPanel>
       </Tabs>
     </div>
   )

@@ -3,7 +3,7 @@ import { cva, VariantProps } from "class-variance-authority"
 import * as React from "react"
 
 export const labelVariants = cva(
-  "select-none text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-50",
+  "select-none text-sm font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-50",
 )
 
 export interface LabelProps

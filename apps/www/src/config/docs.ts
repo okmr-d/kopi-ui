@@ -17,7 +17,7 @@ export const docsConfig: DocsConfig = {
     },
     {
       title: "Components",
-      href: "/docs/components/input",
+      href: "/docs/components/accordion",
     },
   ],
   sidebarNav: [
@@ -35,6 +35,16 @@ export const docsConfig: DocsConfig = {
       title: "Components",
       items: [
         {
+          title: "Accordion 🚧",
+          href: "/docs/components/accordion",
+          items: [],
+        },
+        {
+          title: "Alert Dialog 🚧",
+          href: "/docs/components/alert-dialog",
+          items: [],
+        },
+        {
           title: "Button",
           href: "/docs/components/button",
           items: [],
@@ -45,12 +55,35 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
-          title: "File Input",
-          href: "/docs/components/file-input",
+          title: "Collapsible 🚧",
+          href: "/docs/components/collapsible",
           items: [],
         },
         {
-          title: "Input",
+          title: "Dialog 🚧",
+          href: "/docs/components/dialog",
+          items: [],
+        },
+        {
+          title: "Field 🚧",
+          href: "/docs/components/field",
+          items: [],
+          label: "Coming Soon",
+        },
+        {
+          title: "Fieldset 🚧",
+          href: "/docs/components/fieldset",
+          items: [],
+          label: "Coming Soon",
+        },
+        {
+          title: "Form 🚧",
+          href: "/docs/components/form",
+          items: [],
+          label: "Coming Soon",
+        },
+        {
+          title: "Input 🚧",
           href: "/docs/components/input",
           items: [],
         },
@@ -60,28 +93,74 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
-          title: "Radio Group",
-          href: "/docs/components/radio-group",
+          title: "Menu 🚧",
+          href: "/docs/components/menu",
           items: [],
         },
         {
-          title: "Select",
+          title: "Number Field 🚧",
+          href: "/docs/components/number-field",
+          items: [],
+          label: "Coming Soon",
+        },
+        {
+          title: "Popover 🚧",
+          href: "/docs/components/popover",
+          items: [],
+        },
+        {
+          title: "Preview Card 🚧",
+          href: "/docs/components/preview-card",
+          items: [],
+        },
+        {
+          title: "Progress 🚧",
+          href: "/docs/components/progress",
+          items: [],
+        },
+        {
+          title: "Radio",
+          href: "/docs/components/radio",
+          items: [],
+        },
+        {
+          title: "Scroll Area 🚧",
+          href: "/docs/components/scroll-area",
+          items: [],
+        },
+        {
+          title: "Select 🚧",
           href: "/docs/components/select",
           items: [],
         },
         {
-          title: "Select (Native)",
-          href: "/docs/components/native-select",
+          title: "Separator",
+          href: "/docs/components/separator",
           items: [],
         },
         {
-          title: "Switch",
+          title: "Slider 🚧",
+          href: "/docs/components/slider",
+          items: [],
+        },
+        {
+          title: "Switch 🚧",
           href: "/docs/components/switch",
           items: [],
         },
         {
-          title: "Textarea",
-          href: "/docs/components/textarea",
+          title: "Tabs 🚧",
+          href: "/docs/components/tabs",
+          items: [],
+        },
+        {
+          title: "Toggle 🚧",
+          href: "/docs/components/toggle",
+          items: [],
+        },
+        {
+          title: "Tooltip 🚧",
+          href: "/docs/components/tooltip",
           items: [],
         },
       ],

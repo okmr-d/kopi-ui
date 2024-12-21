@@ -1,0 +1,57 @@
+---
+title: Progress
+description: Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.
+component: true
+links:
+  doc: https://base-ui.com/react/components/progress
+  api: https://base-ui.com/react/components/progress#api-reference
+---
+
+🚧 Under development
+
+<ComponentPreview
+  name="progress-demo"
+  description="A progress bar component."
+/>
+
+## Installation
+
+<Tabs defaultValue="manual">
+
+<TabsList>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>Copy and paste the following code into your project.</Step>
+
+<ComponentSource name="progress" />
+
+<Step>Update the import paths to match your project setup.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Usage
+
+```tsx
+import {
+  Progress,
+  ProgressTrack,
+  ProgressIndicator,
+} from "@/components/ui/progress"
+```
+
+```tsx
+<Progress value={33}>
+  <ProgressTrack>
+    <ProgressIndicator />
+  </ProgressTrack>
+</Progress>
+```

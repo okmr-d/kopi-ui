@@ -1,14 +1,10 @@
 "use client"
 
 import * as React from "react"
+import * as Collapsible from "@radix-ui/react-collapsible"
 
 import { cn } from "@/lib/utils"
-import { Button } from "@/components/shadcn-ui/button"
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/shadcn-ui/collapsible"
+import { Button } from "@/components/ui/button"
 
 interface CodeBlockProps extends React.HTMLAttributes<HTMLDivElement> {
   expandButtonTitle?: string
@@ -25,9 +21,9 @@ export function CodeBlockWrapper({
   const [isOpened, setIsOpened] = React.useState(false)
 
   return (
-    <Collapsible open={isOpened} onOpenChange={setIsOpened}>
+    <Collapsible.Root open={isOpened} onOpenChange={setIsOpened}>
       <div className={cn("relative overflow-hidden", className)} {...props}>
-        <CollapsibleContent
+        <Collapsible.Content
           forceMount
           className={cn(
             "overflow-hidden",
@@ -42,7 +38,7 @@ export function CodeBlockWrapper({
           >
             {children}
           </div>
-        </CollapsibleContent>
+        </Collapsible.Content>
         <div
           className={cn(
             "absolute rounded-lg flex items-center justify-center bg-gradient-to-b from-neutral-700/30 to-neutral-950/90 p-2",
@@ -51,13 +47,13 @@ export function CodeBlockWrapper({
               : ["inset-0", hasTitle && "top-[36px]"],
           )}
         >
-          <CollapsibleTrigger asChild>
-            <Button variant="secondary" className="h-8 text-xs">
+          <Collapsible.Trigger asChild>
+            <Button variant="secondary" size="sm">
               {isOpened ? "Collapse" : expandButtonTitle}
             </Button>
-          </CollapsibleTrigger>
+          </Collapsible.Trigger>
         </div>
       </div>
-    </Collapsible>
+    </Collapsible.Root>
   )
 }

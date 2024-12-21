@@ -4,7 +4,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 import { NavItem, NavItemWithChildren } from "@/types/nav"
 
 import { docsConfig } from "@/config/docs"
-import { Button } from "@/components/shadcn-ui/button"
+import { buttonVariants } from "@/components/ui/button"
 
 interface DocsPagerProps {
   doc: Doc
@@ -20,20 +20,22 @@ export function DocsPager({ doc }: DocsPagerProps) {
   return (
     <div className="flex flex-row items-center justify-between">
       {pager?.prev?.href && (
-        <Button variant="ghost" asChild>
-          <Link href={pager.prev.href}>
-            <ChevronLeft />
-            {pager.prev.title}
-          </Link>
-        </Button>
+        <Link
+          href={pager.prev.href}
+          className={buttonVariants({ variant: "ghost" })}
+        >
+          <ChevronLeft className="size-4" />
+          {pager.prev.title}
+        </Link>
       )}
       {pager?.next?.href && (
-        <Button variant="ghost" className="ml-auto" asChild>
-          <Link href={pager.next.href}>
-            {pager.next.title}
-            <ChevronRight />
-          </Link>
-        </Button>
+        <Link
+          href={pager.next.href}
+          className={buttonVariants({ variant: "ghost", className: "ml-auto" })}
+        >
+          {pager.next.title}
+          <ChevronRight className="size-4" />
+        </Link>
       )}
     </div>
   )
