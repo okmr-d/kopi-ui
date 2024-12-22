@@ -1,6 +1,6 @@
 # Kopi UI
 
-Beautifully designed components that you can copy and paste into your apps. Made with Tailwind CSS. Open source.
+Beautifully designed components that you can copy and paste into your apps. Made with Base UI and Tailwind CSS.
 
 ## Documentation
 
