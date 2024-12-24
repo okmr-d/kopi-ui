@@ -116,7 +116,7 @@ export default async function DocPage({
                 rel="noreferrer"
                 className={cn(
                   buttonVariants({ variant: "secondary", size: "sm" }),
-                  "px-2.5 h-6 gap-1",
+                  "h-6 gap-1 px-2.5",
                 )}
               >
                 Docs
@@ -130,7 +130,7 @@ export default async function DocPage({
                 rel="noreferrer"
                 className={cn(
                   buttonVariants({ variant: "secondary", size: "sm" }),
-                  "px-2.5 h-6 gap-1",
+                  "h-6 gap-1 px-2.5",
                 )}
               >
                 API Reference

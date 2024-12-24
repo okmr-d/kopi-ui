@@ -35,7 +35,7 @@ export const docsConfig: DocsConfig = {
       title: "Components",
       items: [
         {
-          title: "Accordion 🚧",
+          title: "Accordion",
           href: "/docs/components/accordion",
           items: [],
         },

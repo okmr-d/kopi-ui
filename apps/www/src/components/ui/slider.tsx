@@ -17,9 +17,9 @@ const Slider = React.forwardRef<
     )}
     {...props}
   >
-    <SliderPrimitive.Control className="flex w-full h-full data-[orientation=horizontal]:py-3 data-[orientation=vertical]:px-3">
+    <SliderPrimitive.Control className="flex h-full w-full data-[orientation=horizontal]:py-3 data-[orientation=vertical]:px-3">
       <SliderPrimitive.Track className="grow rounded-full bg-secondary data-[orientation=horizontal]:h-2 data-[orientation=vertical]:h-full data-[orientation=horizontal]:w-full data-[orientation=vertical]:w-2">
-        <SliderPrimitive.Indicator className="bg-primary rounded-full data-[orientation=horizontal]:h-full data-[orientation=vertical]:w-full" />
+        <SliderPrimitive.Indicator className="rounded-full bg-primary data-[orientation=horizontal]:h-full data-[orientation=vertical]:w-full" />
         <SliderPrimitive.Thumb className="block h-5 w-5 rounded-full border-2 border-primary bg-background transition-colors focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-ring/40 data-[disabled]:cursor-not-allowed" />
       </SliderPrimitive.Track>
     </SliderPrimitive.Control>

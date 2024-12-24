@@ -28,7 +28,7 @@ const Radio = React.forwardRef<
     <RadioPrimitive.Root
       ref={ref}
       className={cn(
-        "peer h-5 w-5 rounded-full inline-flex items-center justify-center shrink-0 border border-input bg-background data-[checked]:border-primary data-[checked]:bg-primary outline-offset-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-ring disabled:cursor-not-allowed disabled:opacity-50 data-[invalid]:border-destructive data-[invalid]:focus-visible:border-destructive data-[invalid]:data-[checked]:border-destructive data-[invalid]:focus-visible:ring-destructive data-[invalid]:data-[checked]:bg-destructive",
+        "peer inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-input bg-background outline-offset-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-ring disabled:cursor-not-allowed disabled:opacity-50 data-[checked]:border-primary data-[invalid]:border-destructive data-[invalid]:data-[checked]:border-destructive data-[checked]:bg-primary data-[invalid]:data-[checked]:bg-destructive data-[invalid]:focus-visible:border-destructive data-[invalid]:focus-visible:ring-destructive",
         className,
       )}
       {...props}

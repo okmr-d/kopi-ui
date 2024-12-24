@@ -41,7 +41,7 @@ export function CodeBlockWrapper({
         </Collapsible.Content>
         <div
           className={cn(
-            "absolute rounded-lg flex items-center justify-center bg-gradient-to-b from-neutral-700/30 to-neutral-950/90 p-2",
+            "absolute flex items-center justify-center rounded-lg bg-gradient-to-b from-neutral-700/30 to-neutral-950/90 p-2",
             isOpened
               ? "inset-x-0 bottom-0 h-12"
               : ["inset-0", hasTitle && "top-[36px]"],

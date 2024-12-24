@@ -27,7 +27,7 @@ const Checkbox = React.forwardRef<
   <CheckboxPrimitive.Root
     ref={ref}
     className={cn(
-      "peer h-5 w-5 inline-flex items-center justify-center shrink-0 rounded-sm border border-input data-[checked]:border-primary data-[checked]:bg-primary outline-offset-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-ring data-[disabled]:cursor-not-allowed data-[disabled]:opacity-50 data-[invalid]:border-destructive data-[invalid]:data-[checked]:bg-destructive data-[invalid]:focus-visible:outline-destructive",
+      "peer inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-sm border border-input outline-offset-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-ring data-[disabled]:cursor-not-allowed data-[checked]:border-primary data-[invalid]:border-destructive data-[checked]:bg-primary data-[invalid]:data-[checked]:bg-destructive data-[disabled]:opacity-50 data-[invalid]:focus-visible:outline-destructive",
       props.indeterminate && "border-primary bg-primary",
       className,
     )}

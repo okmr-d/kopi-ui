@@ -11,7 +11,7 @@ export function MainNav() {
   const pathname = usePathname()
 
   return (
-    <div className="mr-4 hidden md:flex gap-6">
+    <div className="mr-4 hidden gap-6 md:flex">
       <Link href="/" className="flex items-center gap-2">
         <CopyIcon className="h-4 w-4" />
         <span className="hidden font-bold md:inline-block">
@@ -25,7 +25,7 @@ export function MainNav() {
             "transition-colors",
             pathname === "/docs/installation"
               ? "text-foreground"
-              : "hover:text-foreground text-foreground/70",
+              : "text-foreground/70 hover:text-foreground",
           )}
         >
           Docs
@@ -36,7 +36,7 @@ export function MainNav() {
             "transition-colors",
             pathname?.startsWith("/docs/components")
               ? "text-foreground"
-              : "hover:text-foreground text-foreground/70",
+              : "text-foreground/70 hover:text-foreground",
           )}
         >
           Components

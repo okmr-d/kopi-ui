@@ -14,7 +14,7 @@ const AccordionItem = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <AccordionPrimitive.Item
     ref={ref}
-    className={cn("border-b", className)}
+    className={cn("border-b border-border", className)}
     {...props}
   />
 ))
@@ -28,13 +28,16 @@ const AccordionTrigger = React.forwardRef<
     <AccordionPrimitive.Trigger
       ref={ref}
       className={cn(
-        "flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&[data-panel-open]>svg]:rotate-180",
+        "flex flex-1 items-center justify-between py-4 font-semibold transition-all data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&[data-panel-open]>svg]:rotate-180",
         className,
       )}
       {...props}
     >
       {children}
-      <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
+      <ChevronDown
+        aria-hidden="true"
+        className="size-4 shrink-0 transition-transform duration-200"
+      />
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ))
@@ -46,13 +49,12 @@ const AccordionPanel = React.forwardRef<
 >(({ className, children, ...props }, ref) => (
   <AccordionPrimitive.Panel
     ref={ref}
-    className="h-[var(--accordion-panel-height)] overflow-hidden text-sm transition-[height] ease-out data-[starting-style]:h-0 data-[ending-style]:h-0"
+    className="h-[var(--accordion-panel-height)] overflow-hidden text-sm transition-[height] data-[ending-style]:h-0 data-[starting-style]:h-0"
     {...props}
   >
     <div className={cn("pb-4 pt-0", className)}>{children}</div>
   </AccordionPrimitive.Panel>
 ))
-
 AccordionPanel.displayName = AccordionPrimitive.Panel.displayName
 
 export { Accordion, AccordionItem, AccordionTrigger, AccordionPanel }

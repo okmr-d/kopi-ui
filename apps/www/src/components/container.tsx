@@ -8,7 +8,7 @@ export const Container = ({
     <div
       {...props}
       className={cn(
-        "w-full max-w-screen-2xl px-4 sm:px-6 lg:px-8 mx-auto",
+        "mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-8",
         className,
       )}
     />

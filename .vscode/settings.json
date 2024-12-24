@@ -1,5 +1,4 @@
 {
-  "eslint.workingDirectories": [
-    { "pattern": "apps/*/" },
-  ]
+  "editor.formatOnSave": true,
+  "eslint.workingDirectories": [{ "pattern": "apps/*/" }]
 }

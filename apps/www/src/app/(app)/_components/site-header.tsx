@@ -14,7 +14,7 @@ export function SiteHeader() {
       <Container className="flex h-14 items-center">
         <MainNav />
         <MobileNav />
-        <div className="flex flex-1 items-center gap-2 justify-end">
+        <div className="flex flex-1 items-center justify-end gap-2">
           <nav className="flex items-center gap-0.5">
             <Link
               href={siteConfig.links.github}

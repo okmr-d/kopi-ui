@@ -43,7 +43,7 @@ export default function DialogCloseButton() {
               />
             </div>
             <Button type="submit">
-              <Copy className="w-4 h-4" />
+              <Copy className="h-4 w-4" />
               <span>Copy</span>
             </Button>
           </div>

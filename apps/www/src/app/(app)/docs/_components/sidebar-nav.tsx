@@ -53,7 +53,7 @@ export function DocsSidebarNavItems({
               item.disabled && "cursor-not-allowed opacity-60",
               pathname === item.href && "underline",
               item.label === "Coming Soon" &&
-                "text-muted-foreground opacity-50 ",
+                "text-muted-foreground opacity-50",
             )}
             target={item.external ? "_blank" : ""}
             rel={item.external ? "noreferrer" : ""}

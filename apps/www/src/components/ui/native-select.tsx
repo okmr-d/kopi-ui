@@ -6,7 +6,7 @@ import * as React from "react"
 export const nativeSelectVariants = cva(
   [
     "peer inline-flex w-full cursor-pointer appearance-none border text-foreground placeholder:text-muted-foreground",
-    "focus-visible:border-ring focus-visible:outline-none focus-visible:ring-[1px] focus-visible:ring-ring",
+    "focus-visible:border-ring focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring",
     "disabled:cursor-not-allowed disabled:opacity-50",
     "data-[invalid]:border-destructive data-[invalid]:focus-visible:border-destructive data-[invalid]:focus-visible:ring-destructive",
     "has-[option[disabled]:checked]:text-muted-foreground",
@@ -18,12 +18,12 @@ export const nativeSelectVariants = cva(
         filled: "border-transparent bg-accent",
       },
       size: {
-        sm: "h-8 pe-7 ps-2.5 text-xs rounded-[7px]",
-        md: "h-9 pe-8 ps-3 text-sm rounded-[8px]",
-        lg: "h-10 pe-9 ps-3.5 text-base rounded-[9px]",
+        sm: "h-8 rounded-sm pe-7 ps-2.5 text-xs",
+        md: "h-9 rounded-md pe-8 ps-3 text-sm",
+        lg: "h-10 rounded-lg pe-9 ps-3.5 text-base",
       },
       isMultiple: {
-        true: "h-auto py-2 ps-0 pe-0 [&>*]:px-3 [&>*]:py-2",
+        true: "h-auto py-2 pe-0 ps-0 [&>*]:px-3 [&>*]:py-2",
       },
     },
     defaultVariants: {
@@ -39,7 +39,7 @@ export const nativeSelectIconVariants = cva("", {
     size: {
       sm: "size-3.5",
       md: "size-4",
-      lg: "size-[1.25rem]",
+      lg: "size-5",
     },
   },
   defaultVariants: {

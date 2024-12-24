@@ -27,8 +27,8 @@ export function ModeSwitcher() {
       className="group/toggle h-8 w-8 px-0"
       onClick={toggleTheme}
     >
-      <SunIcon className="hidden [html.dark_&]:block w-4 h-4" />
-      <MoonIcon className="hidden [html.light_&]:block w-4 h-4" />
+      <SunIcon className="hidden h-4 w-4 [html.dark_&]:block" />
+      <MoonIcon className="hidden h-4 w-4 [html.light_&]:block" />
       <span className="sr-only">Toggle theme</span>
     </Button>
   )

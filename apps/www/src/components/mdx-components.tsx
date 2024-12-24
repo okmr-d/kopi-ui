@@ -154,7 +154,7 @@ const components = {
       <>
         <pre
           className={cn(
-            "mb-4 mt-6 max-h-[650px] overflow-x-auto border rounded-lg bg-neutral-950 py-4 dark:bg-neutral-900",
+            "mb-4 mt-6 max-h-[650px] overflow-x-auto rounded-lg border bg-neutral-950 py-4 dark:bg-neutral-900",
             className,
           )}
           {...props}
@@ -224,7 +224,7 @@ const components = {
   }: React.ComponentProps<typeof TabsList>) => (
     <TabsList
       className={cn(
-        "w-full justify-start rounded-none border-b bg-transparent p-0 h-9",
+        "h-9 w-full justify-start rounded-none border-b bg-transparent p-0",
         className,
       )}
       {...props}

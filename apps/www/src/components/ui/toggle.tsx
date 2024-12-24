@@ -8,7 +8,7 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const toggleVariants = cva(
-  "inline-flex items-center justify-center font-medium transition-colors hover:bg-muted hover:text-muted-foreground outline-offset-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-ring disabled:pointer-events-none disabled:opacity-50 data-[pressed]:bg-accent data-[pressed]:text-accent-foreground [&_svg]:pointer-events-none [&_svg]:shrink-0",
+  "inline-flex items-center justify-center font-medium outline-offset-2 transition-colors hover:bg-muted hover:text-muted-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-ring disabled:pointer-events-none disabled:opacity-50 data-[pressed]:bg-accent data-[pressed]:text-accent-foreground [&_svg]:pointer-events-none [&_svg]:shrink-0",
   {
     variants: {
       variant: {
@@ -17,9 +17,9 @@ const toggleVariants = cva(
           "border border-input bg-transparent hover:bg-accent hover:text-accent-foreground",
       },
       size: {
-        sm: "h-8 px-2 min-w-8 text-xs rounded-[6px] gap-1.5",
-        md: "h-9 px-2.5 min-w-9 text-sm rounded-[8px] gap-2",
-        lg: "h-10 px-3 min-w-10 text-base rounded-[10px] gap-2.5",
+        sm: "h-8 min-w-8 gap-1.5 rounded-sm px-2 text-xs",
+        md: "h-9 min-w-9 gap-2 rounded-md px-2.5 text-sm",
+        lg: "h-10 min-w-10 gap-2.5 rounded-lg px-3 text-base",
       },
     },
     defaultVariants: {
