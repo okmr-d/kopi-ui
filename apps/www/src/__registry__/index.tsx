@@ -729,20 +729,40 @@ export const Index: Record<string, any> = {
       subcategory: "",
       chunks: [],
     },
-    "dialog-close-button": {
-      name: "dialog-close-button",
+    "dialog-nested": {
+      name: "dialog-nested",
       description: "",
       type: "registry:example",
       registryDependencies: ["dialog", "button"],
       files: [
         {
-          path: "src/components/examples/dialog-close-button.tsx",
+          path: "src/components/examples/dialog-nested.tsx",
           type: "registry:example",
           target: "",
         },
       ],
       component: React.lazy(
-        () => import("@/components/examples/dialog-close-button"),
+        () => import("@/components/examples/dialog-nested"),
+      ),
+      source: "",
+      category: "",
+      subcategory: "",
+      chunks: [],
+    },
+    "dialog-close-confirmation": {
+      name: "dialog-close-confirmation",
+      description: "",
+      type: "registry:example",
+      registryDependencies: ["dialog", "button"],
+      files: [
+        {
+          path: "src/components/examples/dialog-close-confirmation.tsx",
+          type: "registry:example",
+          target: "",
+        },
+      ],
+      component: React.lazy(
+        () => import("@/components/examples/dialog-close-confirmation"),
       ),
       source: "",
       category: "",
