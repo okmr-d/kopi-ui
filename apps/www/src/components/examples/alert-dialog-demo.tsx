@@ -10,13 +10,13 @@ import {
   AlertDialogBackdrop,
   AlertDialogClose,
 } from "@/components/ui/alert-dialog"
-import { Button, buttonVariants } from "@/components/ui/button"
+import { buttonVariants } from "@/components/ui/button"
 
 export default function AlertDialogDemo() {
   return (
     <AlertDialog>
       <AlertDialogTrigger className={buttonVariants({ variant: "outline" })}>
-        Show Dialog
+        Show Alert Dialog
       </AlertDialogTrigger>
       <AlertDialogPortal>
         <AlertDialogBackdrop />
@@ -34,7 +34,11 @@ export default function AlertDialogDemo() {
             >
               Cancel
             </AlertDialogClose>
-            <Button variant="destructive">Continue</Button>
+            <AlertDialogClose
+              className={buttonVariants({ variant: "destructive" })}
+            >
+              Continue
+            </AlertDialogClose>
           </AlertDialogFooter>
         </AlertDialogPopup>
       </AlertDialogPortal>

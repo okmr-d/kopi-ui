@@ -8,8 +8,6 @@ links:
   api: https://base-ui.com/react/components/dialog#api-reference
 ---
 
-🚧 Under development
-
 <ComponentPreview
   name="dialog-demo"
   description="A dialog for editing profile details."
@@ -44,11 +42,13 @@ links:
 ```tsx
 import {
   Dialog,
-  DialogPortal,
   DialogBackdrop,
-  DialogPopup,
+  DialogClose,
   DialogDescription,
+  DialogFooter,
   DialogHeader,
+  DialogPopup,
+  DialogPortal,
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
@@ -56,17 +56,18 @@ import {
 
 ```tsx
 <Dialog>
-  <DialogTrigger>Open</DialogTrigger>
+  <DialogTrigger>Open Dialog</DialogTrigger>
   <DialogPortal>
     <DialogBackdrop />
     <DialogPopup>
       <DialogHeader>
-        <DialogTitle>Are you absolutely sure?</DialogTitle>
-        <DialogDescription>
-          This action cannot be undone. This will permanently delete your
-          account and remove your data from our servers.
-        </DialogDescription>
+        <DialogTitle>Title</DialogTitle>
+        <DialogDescription>Description</DialogDescription>
       </DialogHeader>
+      <div>Dialog Body</div>
+      <DialogFooter>
+        <DialogClose>Close</DialogClose>
+      </DialogFooter>
     </DialogPopup>
   </DialogPortal>
 </Dialog>
@@ -74,6 +75,12 @@ import {
 
 ## Examples
 
-### Custom close button
+### Nested dialogs
 
-<ComponentPreview name="dialog-close-button" />
+<ComponentPreview name="dialog-nested" />
+
+### Close confirmation
+
+🚧 Under development
+
+<ComponentPreview name="dialog-close-confirmation" />

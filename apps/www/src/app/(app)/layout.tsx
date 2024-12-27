@@ -7,7 +7,7 @@ interface AppLayoutProps {
 
 export default function AppLayout({ children }: AppLayoutProps) {
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="isolate flex min-h-screen flex-col">
       <SiteHeader />
       <main className="grow">{children}</main>
       <SiteFooter />

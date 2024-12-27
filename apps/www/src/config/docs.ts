@@ -40,7 +40,7 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
-          title: "Alert Dialog 🚧",
+          title: "Alert Dialog",
           href: "/docs/components/alert-dialog",
           items: [],
         },
@@ -60,7 +60,7 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
-          title: "Dialog 🚧",
+          title: "Dialog",
           href: "/docs/components/dialog",
           items: [],
         },
