@@ -104,7 +104,7 @@ export const docsConfig: DocsConfig = {
           label: "Coming Soon",
         },
         {
-          title: "Popover 🚧",
+          title: "Popover",
           href: "/docs/components/popover",
           items: [],
         },

@@ -7,8 +7,6 @@ links:
   api: https://base-ui.com/react/components/popover#api-reference
 ---
 
-🚧 Under development
-
 <ComponentPreview
   name="popover-demo"
   description="A popover component with a form."
@@ -43,7 +41,10 @@ links:
 ```tsx
 import {
   Popover,
-  PopoverContent,
+  PopoverArrow,
+  PopoverPopup,
+  PopoverPortal,
+  PopoverPositioner,
   PopoverTrigger,
 } from "@/components/ui/popover"
 ```
@@ -51,6 +52,13 @@ import {
 ```tsx
 <Popover>
   <PopoverTrigger>Open</PopoverTrigger>
-  <PopoverContent>Place content for the popover here.</PopoverContent>
+  <PopoverPortal>
+    <PopoverPositioner>
+      <PopoverPopup>
+        <PopoverArrow />
+        Place content for the popover here.
+      </PopoverPopup>
+    </PopoverPositioner>
+  </PopoverPortal>
 </Popover>
 ```

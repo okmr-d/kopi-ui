@@ -13,7 +13,18 @@ const PreviewCardPortal = PreviewCardPrimitive.Portal
 
 const PreviewCardBackdrop = PreviewCardPrimitive.Backdrop
 
-const PreviewCardPositioner = PreviewCardPrimitive.Positioner
+const PreviewCardPositioner = React.forwardRef<
+  React.ElementRef<typeof PreviewCardPrimitive.Positioner>,
+  React.ComponentPropsWithoutRef<typeof PreviewCardPrimitive.Positioner>
+>(({ className, sideOffset = 8, ...props }, ref) => (
+  <PreviewCardPrimitive.Positioner
+    ref={ref}
+    sideOffset={sideOffset}
+    className={cn("outline-0", className)}
+    {...props}
+  />
+))
+PreviewCardPositioner.displayName = PreviewCardPrimitive.Positioner.displayName
 
 const PreviewCardPopup = React.forwardRef<
   React.ElementRef<typeof PreviewCardPrimitive.Popup>,
@@ -22,7 +33,7 @@ const PreviewCardPopup = React.forwardRef<
   <PreviewCardPrimitive.Popup
     ref={ref}
     className={cn(
-      "w-64 max-w-[calc(100vw-3rem)] origin-[var(--transform-origin)] rounded-lg border bg-popover p-4 text-popover-foreground shadow-md outline-none transition data-[ending-style]:scale-95 data-[starting-style]:scale-95 data-[ending-style]:opacity-0 data-[starting-style]:opacity-0",
+      "w-72 max-w-[calc(100vw-3rem)] origin-[var(--transform-origin)] rounded-lg border bg-popover p-4 text-popover-foreground shadow-md outline-none transition data-[ending-style]:scale-95 data-[starting-style]:scale-95 data-[ending-style]:opacity-0 data-[starting-style]:opacity-0",
       className,
     )}
     {...props}

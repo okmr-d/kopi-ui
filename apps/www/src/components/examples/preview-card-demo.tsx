@@ -21,9 +21,8 @@ export default function PreviewCardDemo() {
         remain into the digital age.
       </p>
       <PreviewCardPortal>
-        <PreviewCardPositioner sideOffset={8}>
-          <PreviewCardPopup className="flex flex-col gap-2">
-            <PreviewCardArrow />
+        <PreviewCardPositioner>
+          <PreviewCardPopup className="grid gap-2">
             <img
               width="448"
               height="300"
