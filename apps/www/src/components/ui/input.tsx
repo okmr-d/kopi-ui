@@ -4,7 +4,7 @@ import * as React from "react"
 import { Input as InputPrimitive } from "@base-ui-components/react/input"
 
 export const inputVariants = cva(
-  "inline-flex h-9 w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 data-[invalid]:border-destructive data-[invalid]:focus-visible:border-destructive data-[invalid]:focus-visible:ring-destructive",
+  "inline-flex h-9 w-full rounded-md border border-input bg-background px-3 text-sm text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 data-[invalid]:border-destructive data-[invalid]:focus-visible:border-destructive data-[invalid]:focus-visible:ring-destructive",
   {
     variants: {
       file: {
@@ -21,11 +21,10 @@ interface InputProps
 const Input = React.forwardRef<
   React.ElementRef<typeof InputPrimitive>,
   InputProps
->(({ className, type, ...props }, ref) => {
+>(({ className, ...props }, ref) => {
   return (
     <InputPrimitive
-      type={type}
-      className={cn(inputVariants({ file: type === "file" }), className)}
+      className={cn(inputVariants({ file: props.type === "file" }), className)}
       ref={ref}
       {...props}
     />

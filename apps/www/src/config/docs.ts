@@ -83,7 +83,7 @@ export const docsConfig: DocsConfig = {
           label: "Coming Soon",
         },
         {
-          title: "Input 🚧",
+          title: "Input",
           href: "/docs/components/input",
           items: [],
         },
