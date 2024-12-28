@@ -28,12 +28,12 @@ const Radio = React.forwardRef<
     <RadioPrimitive.Root
       ref={ref}
       className={cn(
-        "peer inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-input bg-background outline-offset-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-ring disabled:cursor-not-allowed disabled:opacity-50 data-[checked]:border-primary data-[invalid]:border-destructive data-[invalid]:data-[checked]:border-destructive data-[checked]:bg-primary data-[invalid]:data-[checked]:bg-destructive data-[invalid]:focus-visible:border-destructive data-[invalid]:focus-visible:ring-destructive",
+        "peer inline-flex size-4 shrink-0 items-center justify-center rounded-full border border-input bg-background outline-offset-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-ring disabled:cursor-not-allowed disabled:opacity-50 data-[checked]:border-primary data-[invalid]:border-destructive data-[invalid]:data-[checked]:border-destructive data-[checked]:bg-primary data-[invalid]:data-[checked]:bg-destructive data-[invalid]:focus-visible:border-destructive data-[invalid]:focus-visible:ring-destructive",
         className,
       )}
       {...props}
     >
-      <RadioPrimitive.Indicator className="flex h-2 w-2 rounded-full bg-primary-foreground data-[unchecked]:hidden data-[invalid]:bg-destructive-foreground" />
+      <RadioPrimitive.Indicator className="flex size-1.5 items-center justify-center rounded-full bg-primary-foreground data-[unchecked]:hidden data-[invalid]:bg-destructive-foreground" />
     </RadioPrimitive.Root>
   )
 })

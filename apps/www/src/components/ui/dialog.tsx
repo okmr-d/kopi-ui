@@ -44,10 +44,10 @@ const DialogPopup = React.forwardRef<
     {children}
     <DialogClose
       className={cn(
-        "absolute right-4 top-4 inline-flex h-4 w-4 select-none items-center justify-center rounded-sm font-medium opacity-70 outline-offset-2 transition hover:opacity-100 focus:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0",
+        "rounded-xs absolute right-4 top-4 inline-flex size-4 select-none items-center justify-center font-medium opacity-70 outline-offset-2 transition hover:opacity-100 focus:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0",
       )}
     >
-      <X className="h-4 w-4" />
+      <X className="size-4" />
       <span className="sr-only">Close</span>
     </DialogClose>
   </DialogPrimitive.Popup>

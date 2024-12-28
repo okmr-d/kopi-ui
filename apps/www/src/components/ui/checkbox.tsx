@@ -27,7 +27,7 @@ const Checkbox = React.forwardRef<
   <CheckboxPrimitive.Root
     ref={ref}
     className={cn(
-      "peer inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-sm border border-input outline-offset-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-ring data-[disabled]:cursor-not-allowed data-[checked]:border-primary data-[invalid]:border-destructive data-[checked]:bg-primary data-[invalid]:data-[checked]:bg-destructive data-[disabled]:opacity-50 data-[invalid]:focus-visible:outline-destructive",
+      "rounded-xs peer inline-flex size-4 shrink-0 items-center justify-center border border-input outline-offset-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-ring data-[disabled]:cursor-not-allowed data-[checked]:border-primary data-[invalid]:border-destructive data-[checked]:bg-primary data-[invalid]:data-[checked]:bg-destructive data-[disabled]:opacity-50 data-[invalid]:focus-visible:outline-destructive",
       props.indeterminate && "border-primary bg-primary",
       className,
     )}
@@ -41,8 +41,8 @@ const Checkbox = React.forwardRef<
     >
       {props.indeterminate ? (
         <svg
-          width="11"
-          height="11"
+          width="9"
+          height="9"
           viewBox="0 0 9 9"
           fill="currentcolor"
           xmlns="http://www.w3.org/2000/svg"
@@ -55,8 +55,8 @@ const Checkbox = React.forwardRef<
         </svg>
       ) : (
         <svg
-          width="11"
-          height="11"
+          width="9"
+          height="9"
           viewBox="0 0 9 9"
           fill="currentcolor"
           xmlns="http://www.w3.org/2000/svg"
