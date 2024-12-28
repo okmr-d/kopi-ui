@@ -10,7 +10,7 @@ import {
 export default function PreviewCardDemo() {
   return (
     <PreviewCard>
-      <p className="max-w-64 text-balance text-base text-gray-900">
+      <p className="max-w-64 text-balance text-base">
         The principles of good{" "}
         <PreviewCardTrigger
           className="text-blue-800 no-underline decoration-blue-800/60 decoration-1 underline-offset-2 outline-none hover:underline focus-visible:rounded-sm focus-visible:no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-800 data-[popup-open]:underline data-[popup-open]:focus-visible:no-underline"
@@ -31,7 +31,7 @@ export default function PreviewCardDemo() {
               src="https://images.unsplash.com/photo-1619615391095-dfa29e1672ef?q=80&w=448&h=300"
               alt="Station Hofplein signage in Rotterdam, Netherlands"
             />
-            <p className="text-pretty text-sm text-gray-900">
+            <p className="text-pretty text-sm">
               <strong>Typography</strong> is the art and science of arranging
               type to make written language clear, visually appealing, and
               effective in communication.

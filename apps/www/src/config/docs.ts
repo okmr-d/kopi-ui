@@ -109,7 +109,7 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
-          title: "Preview Card 🚧",
+          title: "Preview Card",
           href: "/docs/components/preview-card",
           items: [],
         },
