@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@base-ui-components/react": "1.0.0-alpha.4",
+    "@base-ui-components/react": "1.0.0-alpha.5",
     "@radix-ui/react-collapsible": "^1.1.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
